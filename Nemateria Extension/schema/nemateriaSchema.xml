@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ADOBE SYSTEMS INCORPORATED
+
+ Copyright 2014 Adobe Systems Incorporated
+
+ All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in accordance
+with the terms of the Adobe license agreement accompanying it. If you have received
+this file from a source other than Adobe, then your use, modification, or distribution
+of it requires the prior written permission of Adobe.
+
+Sample Schema
+
+This example demonstrates how a new schema can be defined in a metadata extension package. Here a schema named 'nemateriaSchema' is defined. All the allowed data types that can be used are shown. There are two categories of data types:
+1. Simple or Primitive Types: These are the basic units. Following is the list of simple data Types:
+
+	a. 'boolean' :Allowed values are True or False (the strings should be spelled exactly as shown) 
+	b. 'integer' :A signed or unsigned numeric string used as an integer number representation
+	c. 'text' :A Unicode string
+	d. 'real' :A numeric value of arbitrary precision. 
+	e. 'openchoice' :An open choice is a list of one or more of preferred values, but other values can be freely used
+	f. 'closedchoice' :A closed choice only allows values from the defined list
+	g. 'seq' : An ordered array 
+	h. 'bag' : An unordered array
+	i. 'alt' : An alternative array
+	j. 'date' : A string representing a date in yyyy/dd/mm hh:mm:ss.pp +hh:ss format
+	k. 'rating' : A numeric value of real type between 0-5. Will be represented as 'Rating Stars' in the UI
+	l. 'URL' : A string to store a URL. On the UI this will appears as a special widget through which user can open the URL by clicking a button
+	
+	All the simple data types are tied to a Default Widget. For mapping please refer the documentation. This default mapping can be overridden, for some type, in the view.xml file.
+
+2. Composed data types: These data types can be created by users as combinations of Primitive data types. For example a new composed data type can be created grouping number of primitive data types (like structures). Composed types can be created in two ways:
+		a. Extending a primitive data type: A new type Temperature can be created by extending 'real' type
+		b. Creating structure: Several primitive data types can be grouped into one.
+		
+This sample schema will demonstrate how properties, with all the different data types, are defined.		
+-->
+<xmp_definitions>
+  <!-- Defining the namespace and prefix of the schema --> 	
+	<xmp_schema prefix='nemateriaSchema' namespace='http://my.nemateriaSchema.namespace/' label='Schéma de données du projet Nemateria' description='Ajout de données Dublin core et des namespaces de Nemateria'>
+		
+		<!-- Starting defining the properties, for definition of different attribute please refer documentation -->
+
+		<xmp_property name='Boolean' category='external' type='boolean' label="$$$/nemateriaSchema/Property/BooleanInputLabel=Boolean Field1"  description='$$$/nemateriaSchema/Property/BooleanInputDescription=Defining Boolean data type'/>
+		
+		<!-- By changing category to internal the property becomes read only-->	
+		<xmp_property name='Titre' category='external' type='text' label="$$$/nemateriaSchema/Property/Title=Titre"  description='$$$/nemateriaSchema/Property/TitleDescription=Définir le titre (obligatoire)'/>
+		<xmp_property name='Creator' category='external' type='text' label="$$$/nemateriaSchema/Property/Creator=Créateur"  description='$$$/nemateriaSchema/Property/CreatorDescription=Nom de la personne, organisation ou service responsable de la création du contenu de la ressource'/>
+		<xmp_property name='Subject' category='external' type='text' label="$$$/nemateriaSchema/Property/Subject=Sujet"  description='$$$/nemateriaSchema/Property/SubjectDescription=Thème du contenu de la ressource (mots clés, expressions, codes de classification)'/>
+		<xmp_property name='Description' category='external' type='text' label="$$$/nemateriaSchema/Property/Description=Description"  description='$$$/nemateriaSchema/Property/DescriptionDescription=Présentation du contenu de la ressource (résumé, table des matières, représentation graphique du contenu, texte libre)'/>
+		<xmp_property name='Publisher' category='external' type='text' label="$$$/nemateriaSchema/Property/Publisher=Editeur"  description='$$$/nemateriaSchema/Property/PublisherDescription=Nom de la personne, organisation ou service responsable de la mise à disposition ou de la diffusion de la ressource'/>
+		<xmp_property name='Contributor' category='external' type='text' label="$$$/nemateriaSchema/Property/Contributor=Contributeur"  description='$$$/nemateriaSchema/Property/ContributorDescription=Nom de la personne, organisation ou service responsable de contributions au contenu de la ressource'/>
+		<xmp_property name='Date' category='external' type='text' label="$$$/nemateriaSchema/Property/Date=Date"  description='$$$/nemateriaSchema/Property/DateDescription=Date de création ou de mise à disposition de la ressource'/>
+		<xmp_property name='Type' category='external' type='text' label="$$$/nemateriaSchema/Property/Type=Type"  description='$$$/nemateriaSchema/Property/TypeDescription=Nature ou genre de la ressource (catégories, fonctions, genres généraux, agrégation du contenu)'/>
+		<xmp_property name='Format' category='external' type='text' label="$$$/nemateriaSchema/Property/Format=Format"  description='$$$/nemateriaSchema/Property/FormatDescription=Manifestation physique ou numérique de la ressource'/>
+		<xmp_property name='Identifier' category='external' type='text' label="$$$/nemateriaSchema/Property/Identifier=Identifiant"  description='$$$/nemateriaSchema/Property/IdentifierDescription=Référence univoque à la ressource dans un contexte donné (URI, ISBN)'/>
+		<xmp_property name='Source' category='external' type='text' label="$$$/nemateriaSchema/Property/Source=Source"  description='$$$/nemateriaSchema/Property/SourceDescription=Référence à une ressource dont la ressource décrite est dérivée (URI)'/>
+		<xmp_property name='Language' category='external' type='text' label="$$$/nemateriaSchema/Property/Language=Langue"  description='$$$/nemateriaSchema/Property/LanguageDescription=Langue du contenu intellectuel de la ressource'/>
+		<xmp_property name='Relation' category='external' type='text' label="$$$/nemateriaSchema/Property/Relation=Relation"  description='$$$/nemateriaSchema/Property/RelationDescription=Référence à une ressource apparentée'/>
+		<xmp_property name='Coverage' category='external' type='text' label="$$$/nemateriaSchema/Property/Coverage=Couverture"  description="$$$/nemateriaSchema/Property/CoverageDescription=Couverture spatio-temporelle de la ressource (domaine d'application)"/>
+		<xmp_property name='Rights' category='external' type='text' label="$$$/nemateriaSchema/Property/Rights=Droits"  description='$$$/nemateriaSchema/Property/RightsDescription=Informations sur les droits associés à la ressource (IPR, copyright, etc.)'/>
+
+
+		<!-- In OpenChoice data type the element_type defines what type of list it is -->
+		<xmp_property name='OpenChoice' category='external' type='openchoice' element_type='text' label="$$$/nemateriaSchema/Property/OpenChoiceInputLabel=OpenChoice Field"  description='$$$/nemateriaSchema/Property/OpenChoiceInputDescription=Defining openchoice data type'>
+			<!-- Choices should be provided for Open Choice property -->
+				<xmp_choice raw_value="" label="$$$/nemateriaSchema/Property/Choice_NoColor=(select color)"/>
+
+				<xmp_choice raw_value="red" label="$$$/nemateriaSchema/Property/Choice_Red=red"/>
+
+				<xmp_choice raw_value="green" label="$$$/nemateriaSchema/Property/Choice_Green=green"/>
+
+				<xmp_choice raw_value="blue" label="$$$/nemateriaSchema/Property/Choice_Blue=blue"/>		
+		</xmp_property>	
+		
+		<!-- In closedchoice data type the element_type defines what type of list it is -->
+		<xmp_property name='ClosedChoice' category='external' type='closedchoice' element_type='text' label="$$$/nemateriaSchema/Property/ClosedChoiceInputLabel=ClosedChoice Field"  description='$$$/nemateriaSchema/Property/ClosedChoiceInputDescription=Defining closedchoice data type'>
+			<!-- Choices should be provided for Closed Choice property -->
+				<xmp_choice raw_value="" label="$$$/nemateriaSchema/Property/Choice_NoColor=(select color)"/>
+
+				<xmp_choice raw_value="red" label="$$$/nemateriaSchema/Property/Choice_Red=red"/>
+
+				<xmp_choice raw_value="green" label="$$$/nemateriaSchema/Property/Choice_Green=green"/>
+
+				<xmp_choice raw_value="blue" label="$$$/nemateriaSchema/Property/Choice_Blue=blue"/>		
+		</xmp_property>	
+
+		<!-- In seq data type the element_type defines what type of sequence it is, below is a sequence of text -->
+		<xmp_property name='Sequence' category='external' type='seq' element_type="text" label="$$$/nemateriaSchema/Property/SeqInputLabel=Sequence Field"  description='$$$/nemateriaSchema/Property/SeqInputDescription=Defining Seq data type'/>
+		
+		<!-- In bag data type the element_type defines what type of sequence it is, below is a bag of text -->
+		<xmp_property name='Bag' category='external' type='bag' element_type="text" label="$$$/nemateriaSchema/Property/BagInputLabel=Bag Field"  description='$$$/nemateriaSchema/Property/BagInputDescription=Defining Bag data type'/>
+
+		<xmp_property name='Alt' category='external' type='alt' element_type="text" label="$$$/nemateriaSchema/Property/AltInputLabel=Alt Field"  description='$$$/nemateriaSchema/Property/AltInputDescription=Defining alt data type'/>		
+		
+		<xmp_property name='Date' category='external' type='date' label="$$$/nemateriaSchema/Property/DateInputLabel=Date Field"  description='$$$/nemateriaSchema/Property/DateInputDescription=Defining Date data type'/>
+
+		<xmp_property name='Rating' category='external' type='rating' label="$$$/nemateriaSchema/Property/RatingInputLabel=Rating Field"  description='$$$/nemateriaSchema/Property/RatingInputDescription=Defining Rating data type'/>	
+		
+		<xmp_property name='URL' category='external' type='url' label="$$$/nemateriaSchema/Property/URLInputLabel=URL Field"  description='$$$/nemateriaSchema/Property/URLInputDescription=Defining URL data type'/>
+		
+		<!-- Using Composed data types, which are defined in the end -->
+		
+		<xmp_property name='ExtendsOpenChoice' category='external' type='openchoice_type' label="$$$/nemateriaSchema/Property/e_OpenChoiceInputLabel=Extends OpenChoice"  description='$$$/nemateriaSchema/Property/e_OpenChoiceInputDescription=Data Type Extending openchoice'/>
+		
+		<xmp_property name='ExtendsReal' category='external' type='temperature' label='$$$/nemateriaSchema/Property/e_temperatureInputLabel=Extends Real'  description='$$$/nemateriaSchema/Property/e_temperatureDescription=Data Type Extending Real'/>		
+		
+		<xmp_property name='ComposedStruct' category='external' type='struct_type' label="$$$/nemateriaSchema/Property/ComposedStructLabel=Composed Struct"  description='$$$/nemateriaSchema/Property/ComposedStructDescription=Defining Structure'/>	
+		
+		<!-- Defining array of structure -->
+		<xmp_property name="ArrOfStruct" category='external' type="bag" element_type="struct_type" label='$$$/nemateriaSchema/Property/ArrOfStructInputLabel=Array Of Structure' description='$$$/nemateriaSchema/Property/ArrOfStructDescription=Defining Array of Structure'/>
+	
+	</xmp_schema> <!-- Schema Definition ends here -->
+  
+	<!-- Defining Composed Types --> 
+
+	<!-- This one extends a primitive type -->
+	<xmp_type name='openchoice_type' extends='openchoice' element_type='text'>
+		<xmp_choice raw_value='default' label='$$$/nemateriaSchema/Property/C_Choice_Default=Default'/>
+		<xmp_choice raw_value='choice1' label='$$$/nemateriaSchema/Property/C_Choice_Choice1=Choice 1'/>
+		<xmp_choice raw_value='choice2' label='$$$/nemateriaSchema/Property/C_Choice_Choice2=Choice 2'/>
+		<xmp_choice raw_value='choice3' label='$$$/nemateriaSchema/Property/C_Choice_Choice3=Choice 3'/>
+	</xmp_type>
+
+	<xmp_type name='temperature' extends='real' />
+
+	<!-- This one defines a structure -->
+	<xmp_type name='struct_type' description='$$$/nemateriaSchema/Property/structTypeDescription=Defining Structure' label='$$$/nemateriaSchema/Property/structTypeLabel=Struct Type'>
+	  
+		<xmp_field name='s_text' prefix='stSample' namespace='http://my.nemateriaSchema.namespace/struct#' type='text' label='$$$/nemateriaSchema/Property/S_Text_Label=S_Text' description='$$$/nemateriaSchema/Property/S_Text_Description=Text Field in Struct'/>
+		
+		<xmp_field name='s_url' prefix='stSample' namespace='http://my.nemateriaSchema.namespace/struct#' type='url' label='$$$/nemateriaSchema/Property/S_URL_Label=S_URL' description='$$$/nemateriaSchema/Property/S_URL_Description=URL Field in Struct'/>
+		
+		<xmp_field name='s_boolean' prefix='stSample' namespace='http://my.nemateriaSchema.namespace/struct#' type='boolean' label='$$$/nemateriaSchema/Property/S_Boolean_Label=S_Boolean' description='$$$/nemateriaSchema/Property/S_Boolean_Description=Boolean Field in Struct'/>
+		
+	</xmp_type>
+  
+</xmp_definitions>

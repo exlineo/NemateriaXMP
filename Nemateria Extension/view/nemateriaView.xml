@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ADOBE SYSTEMS INCORPORATED
+
+ Copyright 2014 Adobe Systems Incorporated
+
+ All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in accordance
+with the terms of the Adobe license agreement accompanying it. If you have received
+this file from a source other than Adobe, then your use, modification, or distribution
+of it requires the prior written permission of Adobe.
+-->
+
+<views xmlns="http://ns.adobe.com/metadata/ui/1.0/"> <!--Including the default namespace is a must -->
+<!-- Views can have multiple views (panels) -->
+	
+	<!-- This sample view displays all the properties of nemateriaSchema -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		name="nemateria.DublinCore"
+		label="$$$/nemateriaSchema/Property/DublinCoreLabel=Metadonnees Dublin Core"
+		description="$$$/nemateriaSchema/Property/DublinCoreViewDescription=Cette vue affiche toutes les propriété en lien avec la norme Dublin Core">
+		
+		<property name="nemateriaSchema:Title" />
+		<property name="nemateriaSchema:Creator" />
+		<property name="nemateriaSchema:Subject" />
+		<property name="nemateriaSchema:Description" />
+		<property name="nemateriaSchema:Description" />
+		<property name="nemateriaSchema:Description" />
+		<property name="nemateriaSchema:Publisher" />
+		<property name="nemateriaSchema:Contributor" />
+		<property name="nemateriaSchema:Date" />
+		<property name="nemateriaSchema:Type" />
+		<property name="nemateriaSchema:Format" />		
+		<property name="nemateriaSchema:Identifier" />
+		<property name="nemateriaSchema:Source" />
+		<property name="nemateriaSchema:Language" />
+		<property name="nemateriaSchema:Relation" />
+		<property name="nemateriaSchema:Relation" />
+		<property name="nemateriaSchema:Relation" />
+		<property name="nemateriaSchema:Coverage" />
+		<property name="nemateriaSchema:Rights" />	
+		
+	</view>
+
+	<!-- This sample view displays how the default values of property attributes can be overridden -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.overrideDefaults"
+		label="$$$/nemateriaSchema/Property/overidingDefaultsViewLabel=Override Defaults"
+		description="$$$/nemateriaSchema/Property/overidingDefaultsViewDescription=This view demonstrates how attributes of some properties can be overridden in the view file">
+		
+		<!-- Overriding label and description(tool tip) -->
+		<property name="nemateriaSchema:Integer" label ="Integer (Label Overridden)" description="Overriding the tool tip" />
+		
+		<!-- Overriding the default widget, changing widget of boolean type from checkbox to dropdown -->
+		<property name="nemateriaSchema:Boolean" label="Boolean Field1 (widget changed)" widget="dropdown">
+		
+			<choice label="Unknown" value=""/> <!-- empty value will delete the property -->
+			<choice label="ON" value="True"/>
+			<choice label="OFF" value="False"/>
+		
+		</property>
+		
+		<!-- Overriding a writeable property to read-only -->
+		<property name="nemateriaSchema:Text" label="Text changed to read only" readOnly="true"/>
+
+		<!-- Adding Multiline attribute to text field -->
+		<property name="nemateriaSchema:Text" label="Changed text field to multiline" multiLines="3" />
+		
+		<!-- Displaying only partial properties of a struct -->
+		<property name="nemateriaSchema:ComposedStruct" label="Showing only partial struct properties">
+			<property name="nemateriaSchema:ComposedStruct/stSample:s_boolean"/>
+			<property name="nemateriaSchema:ComposedStruct/stSample:s_text"/>
+		</property>
+		
+	</view>	
+
+	<!-- This sample view displays how the some additional layout elments can be used to organise a view -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		name="sample.layoutElements"
+		label="$$$/nemateriaSchema/Property/layoutOptionsViewLabel=Layout Elements"
+		description="$$$/nemateriaSchema/Property/layoutOptionsViewDescription=This view demonstrates how different layouting elements can be used to organise a view">
+
+		<!-- Adding sections -->
+		<section label="Simple Properties Section" type="labelled">
+			<property name="nemateriaSchema:Text" />
+			<property name="nemateriaSchema:Real" />
+		</section>
+		
+		<section label="Composed Properties Section" type="labelled">
+			<property name="nemateriaSchema:ExtendsOpenChoice" />
+			<property name="nemateriaSchema:ExtendsReal" />
+		</section>
+		
+		<!-- Separator can be used to draw a line across the panel -->
+		<separator/>
+		
+		<!-- Adding a note -->
+		<note icon="info" message="A property can have a hint which is an attached note"/>
+
+		<!-- A property hint is an attached note -->
+		<property name="nemateriaSchema:Bag" hint="Enter comma separated values"/>
+		
+		<separator/>
+		
+		<!-- Formatter can be used with read-only properties to format them -->
+		<formatter label="Length"
+				  description="Adding a 'cm' string at the end of the value"
+				  format="@0 cm"> 
+					<property name="nemateriaSchema:Integer" readOnly="true"/>
+		</formatter>
+		
+		<!-- Shortcut for formatting a single, read-only property -->
+		<property name="nemateriaSchema:Integer" readOnly="true" format="@0 cm"/>
+		
+		<separator/>
+		
+		<!-- Formatter can also be used to format two or more properties together -->
+		<formatter label="Dimension"
+				  description="Clubbing two properties together with formatter"
+				  format="@0 x @1 cm"> 
+					<property name="nemateriaSchema:Integer" readOnly="true"/>
+					<property name="nemateriaSchema:Integer" readOnly="true"/>
+		</formatter>
+		
+	</view>
+	
+	<!-- This sample view demonstrates how properties of default schemas be used, using some properties of dublin core and exif schema -->
+	<view
+		xmlns:dc="http://purl.org/dc/elements/1.1/" 
+		xmlns:exif="http://ns.adobe.com/exif/1.0/"
+		name="sample.usingDefaultSchemas"
+		label="$$$/nemateriaSchema/Property/usingDefaultSchemaViewLabel=Default Schemas"
+		description="$$$/nemateriaSchema/Property/usingDefaultSchemaViewDescription=This view demonstrates how properties of default schemas be used">
+		
+		<property name="dc:creator" />
+		<property name="dc:description" />
+		
+		<property name="exif:ExifVersion" />
+		<formatter
+			  label="Image Size"
+			  description="Shows the X and Y size of the image"
+			  format="{@0} x {@1} pixel">		  
+				<property name="exif:PixelXDimension"/>
+				<property name="exif:PixelYDimension"/>
+		</formatter>
+		
+	</view>		
+	
+</views>
