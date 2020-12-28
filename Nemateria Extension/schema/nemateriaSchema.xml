@@ -45,97 +45,49 @@ This sample schema will demonstrate how properties, with all the different data 
 		<!-- Starting defining the properties, for definition of different attribute please refer documentation -->
 
 		<xmp_property name='Boolean' category='external' type='boolean' label="$$$/nemateriaSchema/Property/BooleanInputLabel=Boolean Field1"  description='$$$/nemateriaSchema/Property/BooleanInputDescription=Defining Boolean data type'/>
+		<!-- Données la gestion des document -->
+		<xmp_property name='DocID' category='external' type='text' label="$$$/nemateriaSchema/Property/DocID=Identifiant unique" description='$$$/nemateriaSchema/Property/DocIDDescription=Identifiant unique du document (se référer à la documentation).'/>
+		<xmp_property name='DocRef' category='external' type='text' label="$$$/nemateriaSchema/Property/DocRef=Référence originale" description="$$$/nemateriaSchema/Property/DocRefDescription=Référence antérieure ou ref de l’original analogique."/>
+		<xmp_property name='DocCreation' category='external' type='text' label="$$$/nemateriaSchema/Property/DocCreation=Date de création original" description="$$$/nemateriaSchema/Property/DocCreationDescription=Date de création de l'original."/>
+		<xmp_property name='DocSupport' category='external' type='text' label="$$$/nemateriaSchema/Property/DocSupport=Nature du support original" description="$$$/nemateriaSchema/Property/DocSupportDescription=Nature du support de l'original (ex. Photo. sur verre / Film cinéma 1 h 23 min / livre 326 pages)."/>
+		<xmp_property name='DocCarac' category='external' type='text' label="$$$/nemateriaSchema/Property/DocCarac=Conservateur des fichiers" description="$$$/nemateriaSchema/Property/DocCaracDescription=Caractéristique technique original (ex. Négatif au collodion 13 x 18 cm)."/>
+		<xmp_property name='DocMaster' category='external' type='text' label="$$$/nemateriaSchema/Property/DocMaster=Détenteur des droits" description="$$$/nemateriaSchema/Property/DocMasterDescription=Format du master numérique (ex. Fichier TIFF RVB 50 millions de pixels)."/>
+		<xmp_property name='DocDateNum' category='external' type='text' label="$$$/nemateriaSchema/Property/DocDateNum=Date de numérisation" description="$$$/nemateriaSchema/Property/DocDateNumDescription=Date de numérisation du document."/>
+		<xmp_property name='DocAccessibilite' category='external' type='bag' label="$$$/nemateriaSchema/Property/DocAccessibilite=Conditions d'accès" description="$$$/nemateriaSchema/Property/DocAccessibiliteDescription=Définit des conditions d'accès au média. Indiquez des chiffres de 0 à 9 séparés par des virgules (se référer à la documentation)"/>
+
+		<!-- Données la gestion des droits et participants -->
+		<xmp_property name='Participants' category='external' type='text' label="$$$/nemateriaSchema/Property/Participants=Participants et rôles" description='$$$/nemateriaSchema/Property/ParticipantsDescription=NOM, Prénom (rôle).'/>
+		<xmp_property name='PartEditeur' category='external' type='text' label="$$$/nemateriaSchema/Property/PartEditeur=Editeur sur le site" description="$$$/nemateriaSchema/Property/PartEditeurDescription=Le détenteur de la collection qui la met en ligne."/>
+		<xmp_property name='PartEditeurSource' category='external' type='text' label="$$$/nemateriaSchema/Property/PartEditeurSource=Editeur oeuvre source" description="$$$/nemateriaSchema/Property/PartEditeurSourceDescription=Raison sociale, lieu de son siège."/>
+		<xmp_property name='PartProducteur' category='external' type='bag' label="$$$/nemateriaSchema/Property/PartProducteur=Producteurs et partenaires" description="$$$/nemateriaSchema/Property/PartProducteurDescription=Raison sociale (rôle) ; ou NOM prénom (rôle) ; séparés par des virgules."/>
+
+		<!-- Données la gestion des informateurs -->
+		<xmp_property name='Informateurs' category='external' type='bag' label="$$$/nemateriaSchema/Property/Informateur=Informateur(s)" description='$$$/nemateriaSchema/Property/InformateursDescription=NOM Prénom (séparés par des virgules).'/>
+		<xmp_property name='InforAlias' category='external' type='bag' label="$$$/nemateriaSchema/Property/InforAlias=Alias ou pseudonyme" description="$$$/nemateriaSchema/Property/InforAliasDescription=Liste des alias ou pseudonymes des informateurs."/>
+		<xmp_property name='InforNaissance' category='external' type='bag' label="$$$/nemateriaSchema/Property/InforNaissance=Date de naissance" description="$$$/nemateriaSchema/Property/InforNaissanceDescription=Liste des dates de naissance des informateurs."/>
+		<xmp_property name='InforCompetence' category='external' type='bag' label="$$$/nemateriaSchema/Property/InforCompetence=Compétence de l'informateur" description="$$$/nemateriaSchema/Property/InforCompetenceDescription=Liste des compétences des informateurs (une par informateur)."/>
+
+
+		<!-- Données la gestion des collections -->
+		<xmp_property name='ColNom' category='external' type='text' label="$$$/nemateriaSchema/Property/ColNom=Nom de la collection" description='$$$/nemateriaSchema/Property/ColDescription=Indiquez le nom de la collection à laquelle appartient le média.'/>
+		<xmp_property name='ColNum' category='external' type='text' label="$$$/nemateriaSchema/Property/ColNumerisation=Qui a numérisé" description="$$$/nemateriaSchema/Property/ColNumDescription=Précisez qui est ou sont les personnes qui ont numérisé ce média (chaîne de caractères)"/>
+		<xmp_property name='ColProprietaire' category='external' type='text' label="$$$/nemateriaSchema/Property/ColProprietaire=Propriétaire des originaux" description="$$$/nemateriaSchema/Property/ColProprietaireDescription=Précisez qui est le propriétaire des originaux."/>
+		<xmp_property name='ColOriginaux' category='external' type='text' label="$$$/nemateriaSchema/Property/SeqResume=Conservateur originaux" description="$$$/nemateriaSchema/Property/ColOriginauxDescription=Indiqez qui conserve les fichiers."/>
+		<xmp_property name='ColConserve' category='external' type='text' label="$$$/nemateriaSchema/Property/seqMotCles=Conservateur fichiers" description="$$$/nemateriaSchema/Property/ColConservateurDescription=Indiquez le conservateur des fichiers."/>
+		<xmp_property name='ColDetenteur' category='external' type='text' label="$$$/nemateriaSchema/Property/ColDetenteur=Détenteur des droits" description="$$$/nemateriaSchema/Property/ColDetenteurDescription=Précisez qui détient les droits sur la collection."/>
+		<xmp_property name='ColGestionnaire' category='external' type='text' label="$$$/nemateriaSchema/Property/seqMarqueEvenement=Marques ou événements" description="$$$/nemateriaSchema/Property/ColMarqueDescription=Liste des codes d'événements à déclencher (chaîne de caractères). Référez-vous à la documentation pour connaître le détail de ces marques."/>
 		
-		<!-- By changing category to internal the property becomes read only-->	
-		<xmp_property name='Titre' category='external' type='text' label="$$$/nemateriaSchema/Property/Title=Titre"  description='$$$/nemateriaSchema/Property/TitleDescription=Définir le titre (obligatoire)'/>
-		<xmp_property name='Creator' category='external' type='text' label="$$$/nemateriaSchema/Property/Creator=Créateur"  description='$$$/nemateriaSchema/Property/CreatorDescription=Nom de la personne, organisation ou service responsable de la création du contenu de la ressource'/>
-		<xmp_property name='Subject' category='external' type='text' label="$$$/nemateriaSchema/Property/Subject=Sujet"  description='$$$/nemateriaSchema/Property/SubjectDescription=Thème du contenu de la ressource (mots clés, expressions, codes de classification)'/>
-		<xmp_property name='Description' category='external' type='text' label="$$$/nemateriaSchema/Property/Description=Description"  description='$$$/nemateriaSchema/Property/DescriptionDescription=Présentation du contenu de la ressource (résumé, table des matières, représentation graphique du contenu, texte libre)'/>
-		<xmp_property name='Publisher' category='external' type='text' label="$$$/nemateriaSchema/Property/Publisher=Editeur"  description='$$$/nemateriaSchema/Property/PublisherDescription=Nom de la personne, organisation ou service responsable de la mise à disposition ou de la diffusion de la ressource'/>
-		<xmp_property name='Contributor' category='external' type='text' label="$$$/nemateriaSchema/Property/Contributor=Contributeur"  description='$$$/nemateriaSchema/Property/ContributorDescription=Nom de la personne, organisation ou service responsable de contributions au contenu de la ressource'/>
-		<xmp_property name='Date' category='external' type='text' label="$$$/nemateriaSchema/Property/Date=Date"  description='$$$/nemateriaSchema/Property/DateDescription=Date de création ou de mise à disposition de la ressource'/>
-		<xmp_property name='Type' category='external' type='text' label="$$$/nemateriaSchema/Property/Type=Type"  description='$$$/nemateriaSchema/Property/TypeDescription=Nature ou genre de la ressource (catégories, fonctions, genres généraux, agrégation du contenu)'/>
-		<xmp_property name='Format' category='external' type='text' label="$$$/nemateriaSchema/Property/Format=Format"  description='$$$/nemateriaSchema/Property/FormatDescription=Manifestation physique ou numérique de la ressource'/>
-		<xmp_property name='Identifier' category='external' type='text' label="$$$/nemateriaSchema/Property/Identifier=Identifiant"  description='$$$/nemateriaSchema/Property/IdentifierDescription=Référence univoque à la ressource dans un contexte donné (URI, ISBN)'/>
-		<xmp_property name='Source' category='external' type='text' label="$$$/nemateriaSchema/Property/Source=Source"  description='$$$/nemateriaSchema/Property/SourceDescription=Référence à une ressource dont la ressource décrite est dérivée (URI)'/>
-		<xmp_property name='Language' category='external' type='text' label="$$$/nemateriaSchema/Property/Language=Langue"  description='$$$/nemateriaSchema/Property/LanguageDescription=Langue du contenu intellectuel de la ressource'/>
-		<xmp_property name='Relation' category='external' type='text' label="$$$/nemateriaSchema/Property/Relation=Relation"  description='$$$/nemateriaSchema/Property/RelationDescription=Référence à une ressource apparentée'/>
-		<xmp_property name='Coverage' category='external' type='text' label="$$$/nemateriaSchema/Property/Coverage=Couverture"  description="$$$/nemateriaSchema/Property/CoverageDescription=Couverture spatio-temporelle de la ressource (domaine d'application)"/>
-		<xmp_property name='Rights' category='external' type='text' label="$$$/nemateriaSchema/Property/Rights=Droits"  description='$$$/nemateriaSchema/Property/RightsDescription=Informations sur les droits associés à la ressource (IPR, copyright, etc.)'/>
+		<!-- Données pour les médias en série en particulier -->
+		<xmp_property name='Serie' category='external' type='text' label="$$$/nemateriaSchema/Property/Serie=Fait partie de la série"  description='$$$/nemateriaSchema/Property/SerieDescription=Indiquez un nom simple. Composez le en tenant compte des classements par ordre.'/>
+		<xmp_property name='SerieParent' category='external' type='text' label="$$$/nemateriaSchema/Property/SerieParent=Série parent"  description="$$$/nemateriaSchema/Property/SerieParentDescription=Indiquez le nom de l'élément dont dépend"/>
+		<xmp_property name='SerieOrdre' category='external' type='integrer' label="$$$/nemateriaSchema/Property/SerieOrdre=Ordre dans la série"  description="$$$/nemateriaSchema/Property/OrdreDescription=Classez le média dans un ordre par rapport à un ensemble."/>
 
+		<!-- Données pour les séquences des médias audiovisuels -->
+		<xmp_property name='Sequence' category='external' type='bag' label="$$$/nemateriaSchema/Property/Sequence=Numéro de la séquence" description='$$$/nemateriaSchema/Property/SeqDescription=Indiquez la liste des de séquences ou de marques.'/>
+		<xmp_property name='TimeCode' category='external' type='bag' label="$$$/nemateriaSchema/Property/TimeCode=Liste des 'time code'" description="$$$/nemateriaSchema/Property/SeqTimeCodeDescription=Indiquez la liste des time code des séquences (le début de chacune)."/>
+		<xmp_property name='Duree' category='external' type='bag' label="$$$/nemateriaSchema/Property/seqDuree=Liste des durées" description="$$$/nemateriaSchema/Property/SeqDureeDescription=Renseignez la liste des durées de chaque séquence."/>
+		<xmp_property name='Resume' category='external' type='bag' label="$$$/nemateriaSchema/Property/SeqResume=Liste des résumés" description="$$$/nemateriaSchema/Property/SeqResumeDescription=Donnez des informations sur la séquence (une liste ici aussi)."/>
+		<xmp_property name='MotsCles' category='external' type='bag' label="$$$/nemateriaSchema/Property/seqMotCles=Mots clés" description="$$$/nemateriaSchema/Property/SeqMotsClesDescription=Liste des mots clés de chaque séquence."/>
+		<xmp_property name='MarqueEvenement' category='external' type='bag' label="$$$/nemateriaSchema/Property/seqMarqueEvenement=Marque ou événement" description="$$$/nemateriaSchema/Property/SeqMarqueEvenementDescription=Liste des codes d'événements à déclencher (chaîne de caractères). Référez-vous à la documentation pour connaître le détail de ces marques."/>
 
-		<!-- In OpenChoice data type the element_type defines what type of list it is -->
-		<xmp_property name='OpenChoice' category='external' type='openchoice' element_type='text' label="$$$/nemateriaSchema/Property/OpenChoiceInputLabel=OpenChoice Field"  description='$$$/nemateriaSchema/Property/OpenChoiceInputDescription=Defining openchoice data type'>
-			<!-- Choices should be provided for Open Choice property -->
-				<xmp_choice raw_value="" label="$$$/nemateriaSchema/Property/Choice_NoColor=(select color)"/>
-
-				<xmp_choice raw_value="red" label="$$$/nemateriaSchema/Property/Choice_Red=red"/>
-
-				<xmp_choice raw_value="green" label="$$$/nemateriaSchema/Property/Choice_Green=green"/>
-
-				<xmp_choice raw_value="blue" label="$$$/nemateriaSchema/Property/Choice_Blue=blue"/>		
-		</xmp_property>	
-		
-		<!-- In closedchoice data type the element_type defines what type of list it is -->
-		<xmp_property name='ClosedChoice' category='external' type='closedchoice' element_type='text' label="$$$/nemateriaSchema/Property/ClosedChoiceInputLabel=ClosedChoice Field"  description='$$$/nemateriaSchema/Property/ClosedChoiceInputDescription=Defining closedchoice data type'>
-			<!-- Choices should be provided for Closed Choice property -->
-				<xmp_choice raw_value="" label="$$$/nemateriaSchema/Property/Choice_NoColor=(select color)"/>
-
-				<xmp_choice raw_value="red" label="$$$/nemateriaSchema/Property/Choice_Red=red"/>
-
-				<xmp_choice raw_value="green" label="$$$/nemateriaSchema/Property/Choice_Green=green"/>
-
-				<xmp_choice raw_value="blue" label="$$$/nemateriaSchema/Property/Choice_Blue=blue"/>		
-		</xmp_property>	
-
-		<!-- In seq data type the element_type defines what type of sequence it is, below is a sequence of text -->
-		<xmp_property name='Sequence' category='external' type='seq' element_type="text" label="$$$/nemateriaSchema/Property/SeqInputLabel=Sequence Field"  description='$$$/nemateriaSchema/Property/SeqInputDescription=Defining Seq data type'/>
-		
-		<!-- In bag data type the element_type defines what type of sequence it is, below is a bag of text -->
-		<xmp_property name='Bag' category='external' type='bag' element_type="text" label="$$$/nemateriaSchema/Property/BagInputLabel=Bag Field"  description='$$$/nemateriaSchema/Property/BagInputDescription=Defining Bag data type'/>
-
-		<xmp_property name='Alt' category='external' type='alt' element_type="text" label="$$$/nemateriaSchema/Property/AltInputLabel=Alt Field"  description='$$$/nemateriaSchema/Property/AltInputDescription=Defining alt data type'/>		
-		
-		<xmp_property name='Date' category='external' type='date' label="$$$/nemateriaSchema/Property/DateInputLabel=Date Field"  description='$$$/nemateriaSchema/Property/DateInputDescription=Defining Date data type'/>
-
-		<xmp_property name='Rating' category='external' type='rating' label="$$$/nemateriaSchema/Property/RatingInputLabel=Rating Field"  description='$$$/nemateriaSchema/Property/RatingInputDescription=Defining Rating data type'/>	
-		
-		<xmp_property name='URL' category='external' type='url' label="$$$/nemateriaSchema/Property/URLInputLabel=URL Field"  description='$$$/nemateriaSchema/Property/URLInputDescription=Defining URL data type'/>
-		
-		<!-- Using Composed data types, which are defined in the end -->
-		
-		<xmp_property name='ExtendsOpenChoice' category='external' type='openchoice_type' label="$$$/nemateriaSchema/Property/e_OpenChoiceInputLabel=Extends OpenChoice"  description='$$$/nemateriaSchema/Property/e_OpenChoiceInputDescription=Data Type Extending openchoice'/>
-		
-		<xmp_property name='ExtendsReal' category='external' type='temperature' label='$$$/nemateriaSchema/Property/e_temperatureInputLabel=Extends Real'  description='$$$/nemateriaSchema/Property/e_temperatureDescription=Data Type Extending Real'/>		
-		
-		<xmp_property name='ComposedStruct' category='external' type='struct_type' label="$$$/nemateriaSchema/Property/ComposedStructLabel=Composed Struct"  description='$$$/nemateriaSchema/Property/ComposedStructDescription=Defining Structure'/>	
-		
-		<!-- Defining array of structure -->
-		<xmp_property name="ArrOfStruct" category='external' type="bag" element_type="struct_type" label='$$$/nemateriaSchema/Property/ArrOfStructInputLabel=Array Of Structure' description='$$$/nemateriaSchema/Property/ArrOfStructDescription=Defining Array of Structure'/>
-	
-	</xmp_schema> <!-- Schema Definition ends here -->
-  
-	<!-- Defining Composed Types --> 
-
-	<!-- This one extends a primitive type -->
-	<xmp_type name='openchoice_type' extends='openchoice' element_type='text'>
-		<xmp_choice raw_value='default' label='$$$/nemateriaSchema/Property/C_Choice_Default=Default'/>
-		<xmp_choice raw_value='choice1' label='$$$/nemateriaSchema/Property/C_Choice_Choice1=Choice 1'/>
-		<xmp_choice raw_value='choice2' label='$$$/nemateriaSchema/Property/C_Choice_Choice2=Choice 2'/>
-		<xmp_choice raw_value='choice3' label='$$$/nemateriaSchema/Property/C_Choice_Choice3=Choice 3'/>
-	</xmp_type>
-
-	<xmp_type name='temperature' extends='real' />
-
-	<!-- This one defines a structure -->
-	<xmp_type name='struct_type' description='$$$/nemateriaSchema/Property/structTypeDescription=Defining Structure' label='$$$/nemateriaSchema/Property/structTypeLabel=Struct Type'>
-	  
-		<xmp_field name='s_text' prefix='stSample' namespace='http://my.nemateriaSchema.namespace/struct#' type='text' label='$$$/nemateriaSchema/Property/S_Text_Label=S_Text' description='$$$/nemateriaSchema/Property/S_Text_Description=Text Field in Struct'/>
-		
-		<xmp_field name='s_url' prefix='stSample' namespace='http://my.nemateriaSchema.namespace/struct#' type='url' label='$$$/nemateriaSchema/Property/S_URL_Label=S_URL' description='$$$/nemateriaSchema/Property/S_URL_Description=URL Field in Struct'/>
-		
-		<xmp_field name='s_boolean' prefix='stSample' namespace='http://my.nemateriaSchema.namespace/struct#' type='boolean' label='$$$/nemateriaSchema/Property/S_Boolean_Label=S_Boolean' description='$$$/nemateriaSchema/Property/S_Boolean_Description=Boolean Field in Struct'/>
-		
-	</xmp_type>
-  
 </xmp_definitions>

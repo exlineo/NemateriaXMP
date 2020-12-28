@@ -13,142 +13,112 @@ of it requires the prior written permission of Adobe.
 -->
 
 <views xmlns="http://ns.adobe.com/metadata/ui/1.0/"> <!--Including the default namespace is a must -->
-<!-- Views can have multiple views (panels) -->
-	
-	<!-- This sample view displays all the properties of nemateriaSchema -->	
+	<!-- Informations sur le document -->
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		name="nemateria.DublinCore"
-		label="$$$/nemateriaSchema/Property/DublinCoreLabel=Metadonnees Dublin Core"
-		description="$$$/nemateriaSchema/Property/DublinCoreViewDescription=Cette vue affiche toutes les propriété en lien avec la norme Dublin Core">
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Document"
+		label="$$$/nemateriaSchema/Property/DocViewLabel=[Nemateria] Informations sur le document"
+		description="$$$/nemateriaSchema/DocViewDescription=Renseigner ces informations générales sur le document.">
 		
-		<property name="nemateriaSchema:Title" />
-		<property name="nemateriaSchema:Creator" />
-		<property name="nemateriaSchema:Subject" />
-		<property name="nemateriaSchema:Description" />
-		<property name="nemateriaSchema:Description" />
-		<property name="nemateriaSchema:Description" />
-		<property name="nemateriaSchema:Publisher" />
-		<property name="nemateriaSchema:Contributor" />
-		<property name="nemateriaSchema:Date" />
-		<property name="nemateriaSchema:Type" />
-		<property name="nemateriaSchema:Format" />		
-		<property name="nemateriaSchema:Identifier" />
-		<property name="nemateriaSchema:Source" />
-		<property name="nemateriaSchema:Language" />
-		<property name="nemateriaSchema:Relation" />
-		<property name="nemateriaSchema:Relation" />
-		<property name="nemateriaSchema:Relation" />
-		<property name="nemateriaSchema:Coverage" />
-		<property name="nemateriaSchema:Rights" />	
-		
-	</view>
+		<note icon="info" message="Informations générales sur le document."/>
 
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:DocID"/>
+		<property name="nemateriaSchema:DocRef"/>
+		<property name="nemateriaSchema:DocCreation"/>
+		<property name="nemateriaSchema:DocSupport"/>
+		<property name="nemateriaSchema:DocCarac"/>
+		<property name="nemateriaSchema:DocMaster"/>
+		<property name="nemateriaSchema:DocDateNum"/>
+		<property name="nemateriaSchema:DocAccessibilite"/>
+
+	</view>
+	<!-- Informations sur les droits et participants -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Participants"
+		label="$$$/nemateriaSchema/Property/PartViewLabel=[Nemateria] Informations sur les participants"
+		description="$$$/nemateriaSchema/PartViewDescription=Liste des informations sur les droits et les participants.">
+		
+		<note icon="info" message="Informations générales sur le document."/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:Participants"/>
+		<property name="nemateriaSchema:PartEditeur"/>
+		<property name="nemateriaSchema:PartEditeurSource"/>
+		<property name="nemateriaSchema:PartProducteur"/>
+	</view>
+	<!-- Informations sur les droits et participants -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Informateurs"
+		label="$$$/nemateriaSchema/Property/InforViewLabel=[Nemateria] Informateur(s)"
+		description="$$$/nemateriaSchema/InforViewDescription=Informateurs dans les médias (généralement pour les entretiens audio/vidéo).">
+		
+		<note icon="info" message="Informations générales sur le document."/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:Informateur"/>
+		<property name="nemateriaSchema:InforAlias"/>
+		<property name="nemateriaSchema:InforNaissance"/>
+		<property name="nemateriaSchema:InforCompetence"/>
+
+	</view>
+	<!-- Informations sur la collection -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Collection"
+		label="$$$/nemateriaSchema/Property/CollectionViewLabel=[Nemateria] Informations sur la collection"
+		description="$$$/nemateriaSchema/CollectionViewDescription=Renseigner ces informations sur vos médias sont gérés en collections.">
+		
+		<note icon="info" message="Renseigner ces informations sur vos médias sont gérés en collections."/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:ColNom"/>
+		<property name="nemateriaSchema:ColNum"/>
+		<property name="nemateriaSchema:ColProprietaire"/>
+		<property name="nemateriaSchema:ColOriginaux"/>
+		<property name="nemateriaSchema:ColConserve"/>
+		<property name="nemateriaSchema:ColDetenteur"/>
+		<property name="nemateriaSchema:ColGestionnaire"/>
+	</view>
 	<!-- This sample view displays how the default values of property attributes can be overridden -->	
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
 		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
-		name="nemateria.overrideDefaults"
-		label="$$$/nemateriaSchema/Property/overidingDefaultsViewLabel=Override Defaults"
-		description="$$$/nemateriaSchema/Property/overidingDefaultsViewDescription=This view demonstrates how attributes of some properties can be overridden in the view file">
+		name="nemateria.MediasSeries"
+		label="$$$/nemateriaSchema/Property/imagesSeriesViewLabel=[Nemateria] Medias mis en series"
+		description="$$$/nemateriaSchema/PropertySeriesViewDescription=Métadonnées de l'espace de noms (namespace) des médias mis en séries">
 		
-		<!-- Overriding label and description(tool tip) -->
-		<property name="nemateriaSchema:Integer" label ="Integer (Label Overridden)" description="Overriding the tool tip" />
-		
-		<!-- Overriding the default widget, changing widget of boolean type from checkbox to dropdown -->
-		<property name="nemateriaSchema:Boolean" label="Boolean Field1 (widget changed)" widget="dropdown">
-		
-			<choice label="Unknown" value=""/> <!-- empty value will delete the property -->
-			<choice label="ON" value="True"/>
-			<choice label="OFF" value="False"/>
-		
-		</property>
-		
-		<!-- Overriding a writeable property to read-only -->
-		<property name="nemateriaSchema:Text" label="Text changed to read only" readOnly="true"/>
+		<note icon="info" message="Renseigner les informations de la série à laquelle appartient le média"/>
 
-		<!-- Adding Multiline attribute to text field -->
-		<property name="nemateriaSchema:Text" label="Changed text field to multiline" multiLines="3" />
-		
-		<!-- Displaying only partial properties of a struct -->
-		<property name="nemateriaSchema:ComposedStruct" label="Showing only partial struct properties">
-			<property name="nemateriaSchema:ComposedStruct/stSample:s_boolean"/>
-			<property name="nemateriaSchema:ComposedStruct/stSample:s_text"/>
-		</property>
-		
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:Serie"/>
+		<property name="nemateriaSchema:SerieParent"/>
+		<property name="nemateriaSchema:SerieOrdre"/>
+
 	</view>	
 
 	<!-- This sample view displays how the some additional layout elments can be used to organise a view -->	
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		name="sample.layoutElements"
-		label="$$$/nemateriaSchema/Property/layoutOptionsViewLabel=Layout Elements"
-		description="$$$/nemateriaSchema/Property/layoutOptionsViewDescription=This view demonstrates how different layouting elements can be used to organise a view">
+		name="nemateria.MediasSequences"
+		label="$$$/nemateriaSchema/Property/mediasSequencesViewLabel=[Nemateria] Sequences dans les medias (audio/video)"
+		description="$$$/nemateriaSchema/Property/mediasSequencesViewDescription=Utilisation de cet espace de nom pour gérer les séquences dans les audios et les vidéos. Chaque métadonnée est un tableau de données.">
 
-		<!-- Adding sections -->
-		<section label="Simple Properties Section" type="labelled">
-			<property name="nemateriaSchema:Text" />
-			<property name="nemateriaSchema:Real" />
-		</section>
-		
-		<section label="Composed Properties Section" type="labelled">
-			<property name="nemateriaSchema:ExtendsOpenChoice" />
-			<property name="nemateriaSchema:ExtendsReal" />
-		</section>
-		
-		<!-- Separator can be used to draw a line across the panel -->
-		<separator/>
-		
-		<!-- Adding a note -->
-		<note icon="info" message="A property can have a hint which is an attached note"/>
+		<note icon="info" message="Le renseignement des métdonnées des séquences sont des tableaux avec des éléments séparés par des virgules"/>
 
-		<!-- A property hint is an attached note -->
-		<property name="nemateriaSchema:Bag" hint="Enter comma separated values"/>
-		
-		<separator/>
-		
-		<!-- Formatter can be used with read-only properties to format them -->
-		<formatter label="Length"
-				  description="Adding a 'cm' string at the end of the value"
-				  format="@0 cm"> 
-					<property name="nemateriaSchema:Integer" readOnly="true"/>
-		</formatter>
-		
-		<!-- Shortcut for formatting a single, read-only property -->
-		<property name="nemateriaSchema:Integer" readOnly="true" format="@0 cm"/>
-		
-		<separator/>
-		
-		<!-- Formatter can also be used to format two or more properties together -->
-		<formatter label="Dimension"
-				  description="Clubbing two properties together with formatter"
-				  format="@0 x @1 cm"> 
-					<property name="nemateriaSchema:Integer" readOnly="true"/>
-					<property name="nemateriaSchema:Integer" readOnly="true"/>
-		</formatter>
-		
+		<!-- Propriétés des séquences des médias audiovisuels -->
+		<property name="nemateriaSchema:Sequence"/>
+		<property name="nemateriaSchema:TimeCode"/>
+		<property name="nemateriaSchema:Duree"/>
+		<property name="nemateriaSchema:Resume"/>
+		<property name="nemateriaSchema:MotsCles"/>
+		<property name="nemateriaSchema:MarqueEvenement"/>
 	</view>
-	
-	<!-- This sample view demonstrates how properties of default schemas be used, using some properties of dublin core and exif schema -->
-	<view
-		xmlns:dc="http://purl.org/dc/elements/1.1/" 
-		xmlns:exif="http://ns.adobe.com/exif/1.0/"
-		name="sample.usingDefaultSchemas"
-		label="$$$/nemateriaSchema/Property/usingDefaultSchemaViewLabel=Default Schemas"
-		description="$$$/nemateriaSchema/Property/usingDefaultSchemaViewDescription=This view demonstrates how properties of default schemas be used">
-		
-		<property name="dc:creator" />
-		<property name="dc:description" />
-		
-		<property name="exif:ExifVersion" />
-		<formatter
-			  label="Image Size"
-			  description="Shows the X and Y size of the image"
-			  format="{@0} x {@1} pixel">		  
-				<property name="exif:PixelXDimension"/>
-				<property name="exif:PixelYDimension"/>
-		</formatter>
-		
-	</view>		
 	
 </views>
