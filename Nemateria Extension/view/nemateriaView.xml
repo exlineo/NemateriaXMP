@@ -24,14 +24,14 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Informations générales sur le document."/>
 
 		<!-- Propriétés des séries de médias -->
-		<property name="nemateriaSchema:DocID"/>
-		<property name="nemateriaSchema:DocRef"/>
-		<property name="nemateriaSchema:DocCreation"/>
-		<property name="nemateriaSchema:DocSupport"/>
-		<property name="nemateriaSchema:DocCarac"/>
-		<property name="nemateriaSchema:DocMaster"/>
-		<property name="nemateriaSchema:DocDateNum"/>
-		<property name="nemateriaSchema:DocAccessibilite"/>
+		<property name="nemateriaSchema:id_unique"/>
+		<property name="nemateriaSchema:reference_original"/>
+		<property name="nemateriaSchema:date_creation_original"/>
+		<property name="nemateriaSchema:nature_support_original"/>
+		<property name="nemateriaSchema:conservateur_fichiers"/>
+		<property name="nemateriaSchema:detenteur_droits"/>
+		<property name="nemateriaSchema:date_numerisation"/>
+		<property name="nemateriaSchema:conditions_acces"/>
 
 	</view>
 	<!-- Informations sur les droits et participants -->
@@ -45,10 +45,10 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Informations générales sur le document."/>
 
 		<!-- Propriétés des séries de médias -->
-		<property name="nemateriaSchema:Participants"/>
-		<property name="nemateriaSchema:PartEditeur"/>
-		<property name="nemateriaSchema:PartEditeurSource"/>
-		<property name="nemateriaSchema:PartProducteur"/>
+		<property name="nemateriaSchema:participants"/>
+		<property name="nemateriaSchema:editeur_site"/>
+		<property name="nemateriaSchema:editeur_oeuvre_source"/>
+		<property name="nemateriaSchema:producteurs"/>
 	</view>
 	<!-- Informations sur les droits et participants -->
 	<view
@@ -61,10 +61,10 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Informations générales sur le document."/>
 
 		<!-- Propriétés des séries de médias -->
-		<property name="nemateriaSchema:Informateur"/>
-		<property name="nemateriaSchema:InforAlias"/>
-		<property name="nemateriaSchema:InforNaissance"/>
-		<property name="nemateriaSchema:InforCompetence"/>
+		<property name="nemateriaSchema:informateur"/>
+		<property name="nemateriaSchema:alias_informateur"/>
+		<property name="nemateriaSchema:date_naissance_informateur"/>
+		<property name="nemateriaSchema:competence_informateur"/>
 
 	</view>
 	<!-- Informations sur la collection -->
@@ -78,13 +78,13 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Renseigner ces informations sur vos médias sont gérés en collections."/>
 
 		<!-- Propriétés des séries de médias -->
-		<property name="nemateriaSchema:ColNom"/>
-		<property name="nemateriaSchema:ColNum"/>
-		<property name="nemateriaSchema:ColProprietaire"/>
-		<property name="nemateriaSchema:ColOriginaux"/>
-		<property name="nemateriaSchema:ColConserve"/>
-		<property name="nemateriaSchema:ColDetenteur"/>
-		<property name="nemateriaSchema:ColGestionnaire"/>
+		<property name="nemateriaSchema:nom_collection"/>
+		<property name="nemateriaSchema:qui_numerise"/>
+		<property name="nemateriaSchema:proprietaire_originaux"/>
+		<property name="nemateriaSchema:conservateur_originaux"/>
+		<property name="nemateriaSchema:conservateur_fichiers"/>
+		<property name="nemateriaSchema:detenteur_droits"/>
+		<property name="nemateriaSchema:gestionnaire_collection"/>
 	</view>
 	<!-- This sample view displays how the default values of property attributes can be overridden -->	
 	<view
@@ -97,9 +97,9 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Renseigner les informations de la série à laquelle appartient le média"/>
 
 		<!-- Propriétés des séries de médias -->
-		<property name="nemateriaSchema:Serie"/>
-		<property name="nemateriaSchema:SerieParent"/>
-		<property name="nemateriaSchema:SerieOrdre"/>
+		<property name="nemateriaSchema:serie"/>
+		<property name="nemateriaSchema:serie_parent"/>
+		<property name="nemateriaSchema:ordre_serie"/>
 
 	</view>	
 
@@ -113,12 +113,12 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Le renseignement des métdonnées des séquences sont des tableaux avec des éléments séparés par des virgules"/>
 
 		<!-- Propriétés des séquences des médias audiovisuels -->
-		<property name="nemateriaSchema:Sequence"/>
-		<property name="nemateriaSchema:TimeCode"/>
-		<property name="nemateriaSchema:Duree"/>
-		<property name="nemateriaSchema:Resume"/>
-		<property name="nemateriaSchema:MotsCles"/>
-		<property name="nemateriaSchema:MarqueEvenement"/>
+		<property name="nemateriaSchema:sequence"/>
+		<property name="nemateriaSchema:time_code"/>
+		<property name="nemateriaSchema:duree_sequence"/>
+		<property name="nemateriaSchema:resume_sequence"/>
+		<property name="nemateriaSchema:mots_cles_sequences"/>
+		<property name="nemateriaSchema:marques_evenements"/>
 	</view>
 	
 </views>
