@@ -78,7 +78,7 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Renseigner ces informations sur vos médias sont gérés en collections."/>
 
 		<!-- Propriétés des séries de médias -->
-		<property name="nemateriaSchema:nom_collection"/>
+		<property name="nemateriaSchema:collection"/>
 		<property name="nemateriaSchema:qui_numerise"/>
 		<property name="nemateriaSchema:proprietaire_originaux"/>
 		<property name="nemateriaSchema:conservateur_originaux"/>
@@ -119,6 +119,22 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:resume_sequence"/>
 		<property name="nemateriaSchema:mots_cles_sequences"/>
 		<property name="nemateriaSchema:marques_evenements"/>
+	</view>
+
+	<!-- This sample view displays how the some additional layout elments can be used to organise a view -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		name="nemateria.relations"
+		label="$$$/nemateriaSchema/Property/relationsViewLabel=[Nemateria] Relations entre les médias"
+		description="$$$/nemateriaSchema/Property/relationsViewDescription=Utilisation de cet espace de noms pour renseigner des relations entre documents.">
+
+		<note icon="info" message="Utilisation de cet espace de noms pour renseigner des relations entre documents."/>
+
+		<!-- Propriétés des séquences des médias audiovisuels -->
+		<property name="nemateriaSchema:contient_elements"/>
+		<property name="nemateriaSchema:requiert_documents"/>
+		<property name="nemateriaSchema:liens_docs_internes"/>
+		<property name="nemateriaSchema:liens_docs_externes"/>
 	</view>
 	
 </views>
