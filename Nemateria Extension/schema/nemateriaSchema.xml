@@ -63,7 +63,7 @@ This sample schema will demonstrate how properties, with all the different data 
 		<xmp_property name='rights' category='external' type='text' label="$$$/nemateriaSchema/Property/DBRights=Droits" description="$$$/nemateriaSchema/Property/DBRightsDescription=Informations sur les droits associés à la ressource (IPR, copyright, etc.)"/>
 
 		<!-- Données la gestion des document -->
-		<xmp_property name='id_unique' category='external' type='text' label="$$$/nemateriaSchema/Property/DocID=Identifiant unique" description='$$$/nemateriaSchema/Property/DocIDDescription=Identifiant unique du document (se référer à la documentation).'/>
+		<xmp_property name='identifiant_unique' category='external' type='text' label="$$$/nemateriaSchema/Property/DocID=Identifiant unique" description='$$$/nemateriaSchema/Property/DocIDDescription=Identifiant unique du document (se référer à la documentation).'/>
 		<xmp_property name='reference_original' category='external' type='text' label="$$$/nemateriaSchema/Property/DocRef=Référence originale" description="$$$/nemateriaSchema/Property/DocRefDescription=Référence antérieure ou ref de l’original analogique."/>
 		<xmp_property name='date_creation_original' category='external' type='text' label="$$$/nemateriaSchema/Property/DocCreation=Date de création original" description="$$$/nemateriaSchema/Property/DocCreationDescription=Date de création de l'original."/>
 		<xmp_property name='nature_support_original' category='external' type='text' label="$$$/nemateriaSchema/Property/DocSupport=Nature du support original" description="$$$/nemateriaSchema/Property/DocSupportDescription=Nature du support de l'original (ex. Photo. sur verre / Film cinéma 1 h 23 min / livre 326 pages)."/>
