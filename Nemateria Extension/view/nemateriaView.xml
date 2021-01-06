@@ -17,13 +17,42 @@ of it requires the prior written permission of Adobe.
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
 		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.DublinCore"
+		label="$$$/nemateriaSchema/Property/DocViewLabel=[Nemateria] Dublin Core"
+		description="$$$/nemateriaSchema/DocViewDescription=Renseigner les métadonnées Dublin Core pour le projet Némateria.">
+		
+		<note icon="info" message="Renseigner les métadonnées Dublin Core pour le projet Némateria."/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:title"/>
+		<property name="nemateriaSchema:creator"/>
+		<property name="nemateriaSchema:subject"/>
+		<property name="nemateriaSchema:description"/>
+		<property name="nemateriaSchema:publisher"/>
+		<property name="nemateriaSchema:contributor"/>
+		<property name="nemateriaSchema:date"/>
+		<property name="nemateriaSchema:type"/>
+		<property name="nemateriaSchema:format"/>
+		<property name="nemateriaSchema:identifier"/>
+		<property name="nemateriaSchema:source"/>
+		<property name="nemateriaSchema:language"/>
+		<property name="nemateriaSchema:relation"/>
+		<property name="nemateriaSchema:coverage"/>
+		<property name="nemateriaSchema:rights"/>
+
+	</view>
+
+	<!-- Informations sur le document -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
 		name="nemateria.Document"
 		label="$$$/nemateriaSchema/Property/DocViewLabel=[Nemateria] Informations sur le document"
 		description="$$$/nemateriaSchema/DocViewDescription=Renseigner ces informations générales sur le document.">
 		
 		<note icon="info" message="Informations générales sur le document."/>
 
-		<!-- Propriétés des séries de médias -->
+		<!-- Propriétés du document -->
 		<property name="nemateriaSchema:id_unique"/>
 		<property name="nemateriaSchema:reference_original"/>
 		<property name="nemateriaSchema:date_creation_original"/>
@@ -49,6 +78,8 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:editeur_site"/>
 		<property name="nemateriaSchema:editeur_oeuvre_source"/>
 		<property name="nemateriaSchema:producteurs"/>
+		<property name="nemateriaSchema:notice_copyright"/>
+		<property name="nemateriaSchema:url_licence"/>
 	</view>
 	<!-- Informations sur les droits et participants -->
 	<view
