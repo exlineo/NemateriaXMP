@@ -156,7 +156,7 @@ of it requires the prior written permission of Adobe.
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
 		name="nemateria.relations"
-		label="$$$/nemateriaSchema/Property/relationsViewLabel=[Nemateria] Relations entre les médias"
+		label="$$$/nemateriaSchema/Property/relationsViewLabel=[Nemateria] Relations entre les medias"
 		description="$$$/nemateriaSchema/Property/relationsViewDescription=Utilisation de cet espace de noms pour renseigner des relations entre documents.">
 
 		<note icon="info" message="Utilisation de cet espace de noms pour renseigner des relations entre documents."/>
