@@ -55,6 +55,7 @@ of it requires the prior written permission of Adobe.
 		<!-- Propriétés du document -->
 		<property name="nemateriaSchema:identifiant_unique"/>
 		<property name="nemateriaSchema:reference_original"/>
+		<property name="nemateriaSchema:fichier_original"/>
 		<property name="nemateriaSchema:date_creation_original"/>
 		<property name="nemateriaSchema:nature_support_original"/>
 		<property name="nemateriaSchema:conservateur_fichiers"/>
