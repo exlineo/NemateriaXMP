@@ -110,7 +110,8 @@ of it requires the prior written permission of Adobe.
 		<note icon="info" message="Renseigner ces informations sur vos médias sont gérés en collections."/>
 
 		<!-- Propriétés des séries de médias -->
-		<property name="nemateriaSchema:collection"/>
+		<property name="nemateriaSchema:nom_collection"/>
+		<property name="nemateriaSchema:nom_set"/>
 		<property name="nemateriaSchema:qui_numerise"/>
 		<property name="nemateriaSchema:proprietaire_originaux"/>
 		<property name="nemateriaSchema:conservateur_originaux"/>
