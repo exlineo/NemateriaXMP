@@ -47,8 +47,8 @@ of it requires the prior written permission of Adobe.
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
 		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
 		name="nemateria.Document"
-		label="$$$/nemateriaSchema/Property/DocViewLabel=[Nemateria] Informations sur le document"
-		description="$$$/nemateriaSchema/DocViewDescription=Renseigner ces informations générales sur le document.">
+		label="$$$/nemateriaSchema/Property/FilViewLabel=[Nemateria] Informations sur le document"
+		description="$$$/nemateriaSchema/FilViewDescription=Renseigner ces informations générales sur le document.">
 		
 		<note icon="info" message="Informations générales sur le document."/>
 
