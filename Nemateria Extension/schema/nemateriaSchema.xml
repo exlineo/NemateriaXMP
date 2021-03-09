@@ -116,4 +116,9 @@ This sample schema will demonstrate how properties, with all the different data 
 		<xmp_property name='liens_docs_internes' category='external' type='text' label="$$$/nemateriaSchema/Property/relInternes=Liens vers documents internes" description="$$$/nemateriaSchema/Property/relInternesDescription=Liste des documents internes à la collection en lien avec ce document (séparés par des virgules)."/>
 		<xmp_property name='liens_docs_externes' category='external' type='text' label="$$$/nemateriaSchema/Property/relExternes=Liens vers documents externes" description="$$$/nemateriaSchema/Property/relExternesDescription=Liste des documents externes en lien (séparés par des virgules)."/>
 
+		<xmp_property name='certif_type' category='external' type='text' label="$$$/nemateriaSchema/Property/certifType=Type de certification" description="$$$/nemateriaSchema/Property/certifTypeDescription=Indiquer le type de certification dont il s'agit."/>
+		<xmp_property name='certif_autorite' category='external' type='text' label="$$$/nemateriaSchema/Property/certifAutorite=Autorité certifiante" description="$$$/nemateriaSchema/Property/certifAutoriteDescription=Présenter et expliquer l'autorité qui certifie (blockchain ou organisme)."/>
+		<xmp_property name='certif_hash' category='external' type='text' label="$$$/nemateriaSchema/Property/certifHash=Hash (blockchain)" description="$$$/nemateriaSchema/Property/CertifHashDescription=Hash permettant de vérifier la certification par la blockchain ou un système de certification."/>
+		<xmp_property name='certif_politique' category='external' type='text' label="$$$/nemateriaSchema/Property/certifPolitique=Liens vers documents externes" description="$$$/nemateriaSchema/Property/certifPolitiqueDescription=Lien ou explications vers la certification."/>
+
 </xmp_definitions>

@@ -169,5 +169,21 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:liens_docs_internes"/>
 		<property name="nemateriaSchema:liens_docs_externes"/>
 	</view>
+
+	<!-- Certification par la blockchain ou un organisme de certification -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		name="nemateria.certification"
+		label="$$$/nemateriaSchema/Property/certificationViewLabel=[Nemateria] Certifications (blockchain)"
+		description="$$$/nemateriaSchema/Property/certificationViewDescription=Ajouter des informations pour aider à certifier le document.">
+
+		<note icon="info" message="Ajouter des informations pour aider à certifier le document."/>
+
+		<!-- Propriétés des séquences des médias audiovisuels -->
+		<property name="nemateriaSchema:certif_type"/>
+		<property name="nemateriaSchema:certif_autorite"/>
+		<property name="nemateriaSchema:certif_hash"/>
+		<property name="nemateriaSchema:certif_politique"/>
+	</view>
 	
 </views>
