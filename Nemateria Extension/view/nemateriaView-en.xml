@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ADOBE SYSTEMS INCORPORATED
+
+ Copyright 2014 Adobe Systems Incorporated
+
+ All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in accordance
+with the terms of the Adobe license agreement accompanying it. If you have received
+this file from a source other than Adobe, then your use, modification, or distribution
+of it requires the prior written permission of Adobe.
+-->
+
+<views xmlns="http://ns.adobe.com/metadata/ui/1.0/"> <!--Including the default namespace is a must -->
+	<!-- Informations sur le document -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.DublinCore"
+		label="$$$/nemateriaSchema/Property/DocViewLabel=[Nemateria] Dublin Core"
+		description="$$$/nemateriaSchema/DocViewDescription=Fill Dublin Core data for Nemateria">
+		
+		<note icon="info" message="Dublin Core official fields"/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:title"/>
+		<property name="nemateriaSchema:creator"/>
+		<property name="nemateriaSchema:subject"/>
+		<property name="nemateriaSchema:description"/>
+		<property name="nemateriaSchema:publisher"/>
+		<property name="nemateriaSchema:contributor"/>
+		<property name="nemateriaSchema:date"/>
+		<property name="nemateriaSchema:type"/>
+		<property name="nemateriaSchema:format"/>
+		<property name="nemateriaSchema:identifier"/>
+		<property name="nemateriaSchema:source"/>
+		<property name="nemateriaSchema:language"/>
+		<property name="nemateriaSchema:relation"/>
+		<property name="nemateriaSchema:coverage"/>
+		<property name="nemateriaSchema:rights"/>
+
+	</view>
+
+	<!-- Informations sur le document -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Document"
+		label="$$$/nemateriaSchema/Property/FilViewLabel=[Nemateria] General informations"
+		description="$$$/nemateriaSchema/FilViewDescription=Fill the general informations on document(s)">
+		
+		<note icon="info" message="General informations on document"/>
+
+		<!-- Propriétés du document -->
+		<property name="nemateriaSchema:id"/>
+		<property name="nemateriaSchema:original_reference"/>
+		<property name="nemateriaSchema:original_file"/>
+		<property name="nemateriaSchema:original_creation_date"/>
+		<property name="nemateriaSchema:original_support_type"/>
+		<property name="nemateriaSchema:curator_file"/>
+		<property name="nemateriaSchema:rights_holder"/>
+		<property name="nemateriaSchema:numerisation_date"/>
+		<property name="nemateriaSchema:access_conditions"/>
+
+	</view>
+	<!-- Informations sur les droits et participants -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Attendees"
+		label="$$$/nemateriaSchema/Property/PartViewLabel=[Nemateria] Informations on attendees"
+		description="$$$/nemateriaSchema/PartViewDescription=List informations on rights and attendees.">
+		
+		<note icon="info" message="List informations on rights and attendees."/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:attendees"/>
+		<property name="nemateriaSchema:publisher_online"/>
+		<property name="nemateriaSchema:publisher_source_oeuvre"/>
+		<property name="nemateriaSchema:productors"/>
+		<property name="nemateriaSchema:notice_copyright"/>
+		<property name="nemateriaSchema:url_licence"/>
+	</view>
+	<!-- Informations sur les droits et attendees -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Informants"
+		label="$$$/nemateriaSchema/Property/InforViewLabel=[Nemateria] Informant(s)"
+		description="$$$/nemateriaSchema/InforViewDescription=Informants in medias (uselly on audio/vidéo medias).">
+		
+		<note icon="info" message="Informations on informants."/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:informants"/>
+		<property name="nemateriaSchema:informants_alias"/>
+		<property name="nemateriaSchema:informants_birthday"/>
+		<property name="nemateriaSchema:informants_skills"/>
+
+	</view>
+	<!-- Informations sur la collection -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Collection"
+		label="$$$/nemateriaSchema/Property/CollectionViewLabel=[Nemateria] Informations on collection"
+		description="$$$/nemateriaSchema/CollectionViewDescription=Fill this informations if your media is included in a collection.">
+		
+		<note icon="info" message="Collection of the media"/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:collection_name"/>
+		<property name="nemateriaSchema:set_name"/>
+		<property name="nemateriaSchema:who_scans"/>
+		<property name="nemateriaSchema:original_owner"/>
+		<property name="nemateriaSchema:originals_curator"/>
+		<property name="nemateriaSchema:curator_files"/>
+		<property name="nemateriaSchema:rights_holder"/>
+		<property name="nemateriaSchema:collection_manager"/>
+	</view>
+	<!-- This sample view displays how the default values of property attributes can be overridden -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.MediasSeries"
+		label="$$$/nemateriaSchema/Property/imagesSeriesViewLabel=[Nemateria] Series in medias"
+		description="$$$/nemateriaSchema/PropertySeriesViewDescription=Metadata on series">
+		
+		<note icon="info" message="Fill in the information of the series to which the media belongs in the collection"/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:series"/>
+		<property name="nemateriaSchema:series_parent"/>
+		<property name="nemateriaSchema:series_order"/>
+
+	</view>	
+
+	<!-- This sample view displays how the some additional layout elments can be used to organise a view -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		name="nemateria.MediasSequences"
+		label="$$$/nemateriaSchema/Property/mediasSequencesViewLabel=[Nemateria] Media's sequences (audio/video)"
+		description="$$$/nemateriaSchema/Property/mediasSequencesViewDescription=List of sequences (separate each value by a comma)">
+
+		<note icon="info" message="Fill list of sequences (separate each value by a comma to generate a list)"/>
+
+		<!-- Propriétés des séquences des médias audiovisuels -->
+		<property name="nemateriaSchema:sequences"/>
+		<property name="nemateriaSchema:time_codes"/>
+		<property name="nemateriaSchema:sequences_durations"/>
+		<property name="nemateriaSchema:sequences_resumes"/>
+		<property name="nemateriaSchema:sequences_keywords"/>
+		<property name="nemateriaSchema:events_marks"/>
+	</view>
+
+	<!-- This sample view displays how the some additional layout elments can be used to organise a view -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		name="nemateria.Relations"
+		label="$$$/nemateriaSchema/Property/relationsViewLabel=[Nemateria] Relations between medias"
+		description="$$$/nemateriaSchema/Property/relationsViewDescription=Add relations between medias or documents">
+
+		<note icon="info" message="Add relations between medias or documents"/>
+
+		<!-- Propriétés des séquences des médias audiovisuels -->
+		<property name="nemateriaSchema:contains_elements"/>
+		<property name="nemateriaSchema:require_documents"/>
+		<property name="nemateriaSchema:links_internal_documents"/>
+		<property name="nemateriaSchema:links_external_documents"/>
+	</view>
+
+	<!-- Certification par la blockchain ou un organisme de certification -->	
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		name="nemateria.Certification"
+		label="$$$/nemateriaSchema/Property/certificationViewLabel=[Nemateria] Certifications (blockchain)"
+		description="$$$/nemateriaSchema/Property/certificationViewDescription=Add certification informations like blockchain or signatures">
+
+		<note icon="info" message="Add certification informations like blockchain or signatures"/>
+
+		<!-- Propriétés des séquences des médias audiovisuels -->
+		<property name="nemateriaSchema:certif_type"/>
+		<property name="nemateriaSchema:certif_autority"/>
+		<property name="nemateriaSchema:certif_hash"/>
+		<property name="nemateriaSchema:certif_politic"/>
+	</view>
+	
+</views>
