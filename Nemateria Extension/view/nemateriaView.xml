@@ -15,8 +15,8 @@ of it requires the prior written permission of Adobe.
 <views xmlns="http://ns.adobe.com/metadata/ui/1.0/"> <!--Including the default namespace is a must -->
 	<!-- Informations sur le document -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		xmlns:nemateriaSchema="http://ns.adobe.com/xap/1.0/" 
+		xmlns:stNemateria="http://ns.adobe.com/xap/1.0/struct#"
 		name="nemateria.DublinCore"
 		label="$$$/nemateriaSchema/Property/DocViewLabel=[Nemateria] Dublin Core"
 		description="$$$/nemateriaSchema/DocViewDescription=Fill Dublin Core data for Nemateria">
@@ -39,7 +39,6 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:relation"/>
 		<property name="nemateriaSchema:coverage"/>
 		<property name="nemateriaSchema:rights"/>
-
 	</view>
 
 	<!-- Informations sur le document -->
@@ -52,7 +51,7 @@ of it requires the prior written permission of Adobe.
 		
 		<note icon="info" message="General informations on document"/>
 
-		<!-- Propriétés du document -->
+		<!-- Informations on document owener -->
 		<property name="nemateriaSchema:id"/>
 		<property name="nemateriaSchema:original_reference"/>
 		<property name="nemateriaSchema:original_file"/>
@@ -64,7 +63,7 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:access_conditions"/>
 
 	</view>
-	<!-- Informations sur les droits et participants -->
+	<!-- Informations on rights and attendees -->
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
 		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
@@ -92,14 +91,14 @@ of it requires the prior written permission of Adobe.
 		
 		<note icon="info" message="Informations on informants."/>
 
-		<!-- Propriétés des séries de médias -->
+		<!-- In medias series properties -->
 		<property name="nemateriaSchema:informants"/>
 		<property name="nemateriaSchema:informants_alias"/>
 		<property name="nemateriaSchema:informants_birthday"/>
 		<property name="nemateriaSchema:informants_skills"/>
 
 	</view>
-	<!-- Informations sur la collection -->
+	<!-- Information on collection -->
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
 		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"

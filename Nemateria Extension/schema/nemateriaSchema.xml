@@ -40,7 +40,7 @@ This sample schema will demonstrate how properties, with all the different data 
 -->
 <xmp_definitions>
   <!-- Defining the namespace and prefix of the schema --> 	
-	<xmp_schema prefix='oai_nema' namespace='http://www.nemateria.eu/namespace' label='Data schema for Nemateria' description='Set Dublin Core data for Nemateria'>		
+	<xmp_schema prefix='nemateriaSchema' namespace='http://my.nemateriaSchema.namespace/' label='Data schema for Nemateria' description='Set Dublin Core data for Nemateria'>		
 		
 		<!-- Dublin Core -->
 		<xmp_property name='title' category='external' type='text' label="$$$/nemateriaSchema/Property/DBTitle=Title" description="$$$/nemateriaSchema/Property/DBTitleDescription=Document's title (original or attributed)"/>
@@ -118,5 +118,6 @@ This sample schema will demonstrate how properties, with all the different data 
 		<xmp_property name='certif_autority' category='external' type='text' label="$$$/nemateriaSchema/Property/certifAutorite=Certification authority" description="$$$/nemateriaSchema/Property/certifAutoriteDescription=Présenter et expliquer l'autorité qui certifie (blockchain ou organisme)."/>
 		<xmp_property name='certif_hash' category='external' type='text' label="$$$/nemateriaSchema/Property/certifHash=Hash (blockchain)" description="$$$/nemateriaSchema/Property/CertifHashDescription=Hash permettant de vérifier la certification par la blockchain ou un système de certification."/>
 		<xmp_property name='certif_politic' category='external' type='text' label="$$$/nemateriaSchema/Property/certifPolitique=External link" description="$$$/nemateriaSchema/Property/certifPolitiqueDescription=Link and informations on certification to explain his politic and how it work."/>
-
+	
+	</xmp_schema>
 </xmp_definitions>

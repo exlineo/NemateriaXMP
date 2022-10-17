@@ -14,5 +14,5 @@ of it requires the prior written permission of Adobe.
 <extension xmlns="http://ns.adobe.com/metadata/extension/1.0/"
    name="com.adobe.sample.extension"
    version="1.0"
-   locFilePrefix="nemateria">
+   locFilePrefix="nemateriaSchema">
 </extension>
