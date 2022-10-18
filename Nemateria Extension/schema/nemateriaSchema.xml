@@ -75,8 +75,15 @@ This sample schema will demonstrate how properties, with all the different data 
 		<xmp_property name='publisher_online' category='external' type='text' label="$$$/nemateriaSchema/Property/PartEditeur=Online publisher" description="$$$/nemateriaSchema/Property/PartEditeurDescription=Who hold the online collection."/>
 		<xmp_property name='publisher_source_oeuvre' category='external' type='text' label="$$$/nemateriaSchema/Property/PartEditeurSource=Publisher of the source oeuvre " description="$$$/nemateriaSchema/Property/PartEditeurSourceDescription=Company name, head office (companies could be separated by commas)."/>
 		<xmp_property name='producers' category='external' type='bag' label="$$$/nemateriaSchema/Property/PartProducteur=Partners and producers" description="$$$/nemateriaSchema/Property/PartProducteurDescription=Company name (role) ; or SURNAME firstname (role) (producers could be separated by commas)."/>
-		<xmp_property name='notice_copyright' category='external' type='bag' label="$$$/nemateriaSchema/Property/DroitsCopyright=Copyright's notice" description="$$$/nemateriaSchema/Property/DroitsCopyrightDescription=Licence type and rights explanation."/>
-		<xmp_property name='url_licence' category='external' type='bag' label="$$$/nemateriaSchema/Property/DroitsUrlLicence=Link to licence" description="$$$/nemateriaSchema/Property/DroitsUrlLicenceDescription=A link to an external licence page explanation."/>
+		<xmp_property name='notice_copyright' category='external' type='text' label="$$$/nemateriaSchema/Property/DroitsCopyright=Copyright's notice" description="$$$/nemateriaSchema/Property/DroitsCopyrightDescription=Licence type and rights explanation."/>
+		<xmp_property name='url_licence' category='external' type='text' label="$$$/nemateriaSchema/Property/DroitsUrlLicence=Link to licence" description="$$$/nemateriaSchema/Property/DroitsUrlLicenceDescription=A link to an external licence page explanation."/>
+
+		<!-- Managing localisation data -->
+		<xmp_property name='latitude' category='external' type='text' label="$$$/nemateriaSchema/Property/LocLatitude=Latitude" description='$$$/nemateriaSchema/Property/LocLatitueDescription=Latitude of document to show on map'/>
+		<xmp_property name='longitude' category='external' type='text' label="$$$/nemateriaSchema/Property/LocLongitude=Longitude" description="$$$/nemateriaSchema/Property/LocLongitudeDescription=Longitude to show on map"/>
+		<xmp_property name='where_subject' category='external' type='text' label="$$$/nemateriaSchema/Property/LocWhereSubject=Subject location" description="$$$/nemateriaSchema/Property/LocWherSubjectDescription=Location of the subject treated."/>
+		<xmp_property name='where_digit' category='external' type='text' label="$$$/nemateriaSchema/Property/LocWhereDigit=Where digitized" description="$$$/nemateriaSchema/Property/LocWhereDigitDescription=Where was been digitized."/>
+		<xmp_property name='where_preserv' category='external' type='text' label="$$$/nemateriaSchema/Property/LocWherePreserve=Where preserved" description="$$$/nemateriaSchema/Property/LocWherePreserveDescription=Where document is preserved."/>
 
 		<!-- Managing informants data -->
 		<xmp_property name='informants' category='external' type='bag' label="$$$/nemateriaSchema/Property/Informateur=Informants(s)" description='$$$/nemateriaSchema/Property/InformateursDescription=SURNAME Firstname (informants could be separated by commas).'/>
@@ -93,6 +100,7 @@ This sample schema will demonstrate how properties, with all the different data 
 		<xmp_property name='curator_files' category='external' type='text' label="$$$/nemateriaSchema/Property/seqMotCles=Conservative of the file" description="$$$/nemateriaSchema/Property/ColConservateurDescription=Indicate the conservative of the physical file."/>
 		<xmp_property name='rights_holder' category='external' type='text' label="$$$/nemateriaSchema/Property/ColDetenteur=Rights owner" description="$$$/nemateriaSchema/Property/ColDetenteurDescription=Specify who owns the rights to the collection and/or file."/>
 		<xmp_property name='collection_manager' category='external' type='text' label="$$$/nemateriaSchema/Property/ColGest=Collection's manager" description="$$$/nemateriaSchema/Property/ColGestDescription=Name of collection's manager."/>
+		<xmp_property name='collection_location' category='external' type='text' label="$$$/nemateriaSchema/Property/ColLoc=Collection location" description="$$$/nemateriaSchema/Property/ColLocDescription=What places does the collection originate from or show of."/>
 
 		<!-- Series inside collection's document -->
 		<xmp_property name='series' category='external' type='text' label="$$$/nemateriaSchema/Property/Serie=Is par of the series"  description='$$$/nemateriaSchema/Property/SerieDescription=A simple name (one or two words).'/>

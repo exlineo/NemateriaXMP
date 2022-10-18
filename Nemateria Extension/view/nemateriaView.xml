@@ -81,6 +81,22 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:notice_copyright"/>
 		<property name="nemateriaSchema:url_licence"/>
 	</view>
+	<!-- Managing localisation data -->
+	<view
+		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		name="nemateria.Locations"
+		label="$$$/nemateriaSchema/Property/LocationLabel=[Nemateria] Locations"
+		description="$$$/nemateriaSchema/LocationDescription=Global informations on locations">
+		
+		<note icon="info" message="Global informations on locations."/>
+
+		<!-- Propriétés des séries de médias -->
+		<property name="nemateriaSchema:latitude"/>
+		<property name="nemateriaSchema:longitude"/>
+		<property name="nemateriaSchema:where_subject"/>
+		<property name="nemateriaSchema:where_digit"/>
+	</view>
 	<!-- Informations sur les droits et attendees -->
 	<view
 		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
@@ -117,6 +133,7 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:curator_files"/>
 		<property name="nemateriaSchema:rights_holder"/>
 		<property name="nemateriaSchema:collection_manager"/>
+		<property name="nemateriaSchema:collection_location"/>
 	</view>
 	<!-- This sample view displays how the default values of property attributes can be overridden -->	
 	<view
