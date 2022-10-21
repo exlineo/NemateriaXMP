@@ -78,7 +78,7 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:publisher_online"/>
 		<property name="nemateriaSchema:publisher_source_oeuvre"/>
 		<property name="nemateriaSchema:productors"/>
-		<property name="nemateriaSchema:notice_copyright"/>
+		<property name="nemateriaSchema:copyright"/>
 		<property name="nemateriaSchema:url_licence"/>
 	</view>
 	<!-- Managing localisation data -->
@@ -127,10 +127,10 @@ of it requires the prior written permission of Adobe.
 		<!-- Propriétés des séries de médias -->
 		<property name="nemateriaSchema:collection_name"/>
 		<property name="nemateriaSchema:set_name"/>
+		<property name="nemateriaSchema:collection_infos"/>
 		<property name="nemateriaSchema:who_scans"/>
 		<property name="nemateriaSchema:original_owner"/>
 		<property name="nemateriaSchema:originals_curator"/>
-		<property name="nemateriaSchema:curator_files"/>
 		<property name="nemateriaSchema:rights_holder"/>
 		<property name="nemateriaSchema:collection_manager"/>
 		<property name="nemateriaSchema:collection_location"/>
