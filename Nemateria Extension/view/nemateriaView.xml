@@ -126,7 +126,8 @@ of it requires the prior written permission of Adobe.
 
 		<!-- Propriétés des séries de médias -->
 		<property name="nemateriaSchema:collection_name"/>
-		<property name="nemateriaSchema:set_name"/>
+		<property name="nemateriaSchema:set_name"/>		
+		<property name="nemateriaSchema:collection_funds"/>
 		<property name="nemateriaSchema:collection_infos"/>
 		<property name="nemateriaSchema:who_scans"/>
 		<property name="nemateriaSchema:original_owner"/>
