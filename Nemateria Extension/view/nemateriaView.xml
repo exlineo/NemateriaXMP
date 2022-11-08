@@ -13,17 +13,15 @@ of it requires the prior written permission of Adobe.
 -->
 
 <views xmlns="http://ns.adobe.com/metadata/ui/1.0/"> <!--Including the default namespace is a must -->
-	<!-- Informations sur le document -->
+	<!-- Propriétés Dublin Core (mises de côté pour privilégier IPTC Core) -->
 	<view
-		xmlns:nemateriaSchema="http://ns.adobe.com/xap/1.0/" 
-		xmlns:stNemateria="http://ns.adobe.com/xap/1.0/struct#"
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/"
 		name="nemateria.DublinCore"
-		label="$$$/nemateriaSchema/Property/DocViewLabel=[Nemateria] Dublin Core"
-		description="$$$/nemateriaSchema/DocViewDescription=Fill Dublin Core data for Nemateria">
+		label="$$$/nemateriaView/Property/DCViewLabel=[Nemateria] Dublin Core"
+		description="$$$/nemateriaView/DCViewDescription=[Nemateria] Dublin Core data">
 		
 		<note icon="info" message="Dublin Core official fields"/>
-
-		<!-- Propriétés des séries de médias -->
+		
 		<property name="nemateriaSchema:title"/>
 		<property name="nemateriaSchema:creator"/>
 		<property name="nemateriaSchema:subject"/>
@@ -41,13 +39,12 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:rights"/>
 	</view>
 
-	<!-- Informations sur le document -->
+	<!--Informations sur le document -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/"
 		name="nemateria.Document"
-		label="$$$/nemateriaSchema/Property/FilViewLabel=[Nemateria] General informations"
-		description="$$$/nemateriaSchema/FilViewDescription=Fill the general informations on document(s)">
+		label="[Nemateria] General informations"
+		description="Fill the general informations on document(s)">
 		
 		<note icon="info" message="General informations on document"/>
 
@@ -63,10 +60,10 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:access_conditions"/>
 
 	</view>
-	<!-- Informations on rights and attendees -->
+
+	 <!-- Informations on rights and attendees  -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/"
 		name="nemateria.Attendees"
 		label="$$$/nemateriaSchema/Property/PartViewLabel=[Nemateria] Informations on attendees"
 		description="$$$/nemateriaSchema/PartViewDescription=List informations on rights and attendees.">
@@ -77,14 +74,14 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:attendees"/>
 		<property name="nemateriaSchema:publisher_online"/>
 		<property name="nemateriaSchema:publisher_source_oeuvre"/>
-		<property name="nemateriaSchema:productors"/>
+		<property name="nemateriaSchema:producers"/>
 		<property name="nemateriaSchema:copyright"/>
 		<property name="nemateriaSchema:url_licence"/>
 	</view>
-	<!-- Managing localisation data -->
+
+	 <!-- Managing localisation data  -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/"
 		name="nemateria.Locations"
 		label="$$$/nemateriaSchema/Property/LocationLabel=[Nemateria] Locations"
 		description="$$$/nemateriaSchema/LocationDescription=Global informations on locations">
@@ -97,10 +94,10 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:where_subject"/>
 		<property name="nemateriaSchema:where_digit"/>
 	</view>
-	<!-- Informations sur les droits et attendees -->
+
+	 <!-- Informations sur les droits et attendees  -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/"
 		name="nemateria.Informants"
 		label="$$$/nemateriaSchema/Property/InforViewLabel=[Nemateria] Informant(s)"
 		description="$$$/nemateriaSchema/InforViewDescription=Informants in medias (uselly on audio/vidéo medias).">
@@ -114,10 +111,10 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:informants_skills"/>
 
 	</view>
-	<!-- Information on collection -->
+
+	 <!-- Information on collection -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/"
 		name="nemateria.Collection"
 		label="$$$/nemateriaSchema/Property/CollectionViewLabel=[Nemateria] Informations on collection"
 		description="$$$/nemateriaSchema/CollectionViewDescription=Fill this informations if your media is included in a collection.">
@@ -136,10 +133,10 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:collection_manager"/>
 		<property name="nemateriaSchema:collection_location"/>
 	</view>
-	<!-- This sample view displays how the default values of property attributes can be overridden -->	
+
+	 <!-- This sample view displays how the default values of property attributes can be overridden -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
-		xmlns:stNemateria="http://my.nemateriaSchema.namespace/struct#"
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/"
 		name="nemateria.MediasSeries"
 		label="$$$/nemateriaSchema/Property/imagesSeriesViewLabel=[Nemateria] Series in medias"
 		description="$$$/nemateriaSchema/PropertySeriesViewDescription=Metadata on series">
@@ -153,9 +150,9 @@ of it requires the prior written permission of Adobe.
 
 	</view>	
 
-	<!-- This sample view displays how the some additional layout elments can be used to organise a view -->	
+	 <!-- This sample view displays how the some additional layout elments can be used to organise a view  -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/" 
 		name="nemateria.MediasSequences"
 		label="$$$/nemateriaSchema/Property/mediasSequencesViewLabel=[Nemateria] Media's sequences (audio/video)"
 		description="$$$/nemateriaSchema/Property/mediasSequencesViewDescription=List of sequences (separate each value by a comma)">
@@ -171,9 +168,9 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:events_marks"/>
 	</view>
 
-	<!-- This sample view displays how the some additional layout elments can be used to organise a view -->	
+	 <!-- This sample view displays how the some additional layout elments can be used to organise a view -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/" 
 		name="nemateria.Relations"
 		label="$$$/nemateriaSchema/Property/relationsViewLabel=[Nemateria] Relations between medias"
 		description="$$$/nemateriaSchema/Property/relationsViewDescription=Add relations between medias or documents">
@@ -187,9 +184,9 @@ of it requires the prior written permission of Adobe.
 		<property name="nemateriaSchema:links_external_documents"/>
 	</view>
 
-	<!-- Certification par la blockchain ou un organisme de certification -->	
+	 <!-- Certification par la blockchain ou un organisme de certification -->
 	<view
-		xmlns:nemateriaSchema="http://my.nemateriaSchema.namespace/" 
+		xmlns:nemateriaSchema="http://www.nemateria.eu/namespace/" 
 		name="nemateria.Certification"
 		label="$$$/nemateriaSchema/Property/certificationViewLabel=[Nemateria] Certifications (blockchain)"
 		description="$$$/nemateriaSchema/Property/certificationViewDescription=Add certification informations like blockchain or signatures">

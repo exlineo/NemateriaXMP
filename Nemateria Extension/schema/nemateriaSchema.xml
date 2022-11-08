@@ -14,119 +14,119 @@ of it requires the prior written permission of Adobe.
 
 Sample Schema
 
-This example demonstrates how a new schema can be defined in a metadata extension package. Here a schema named 'nemateriaSchema' is defined. All the allowed data types that can be used are shown. There are two categories of data types:
+This example demonstrates how a new schema can be defined in a metadata extension package. Here a schema named "nemateriaSchema" is defined. All the allowed data types that can be used are shown. There are two categories of data types:
 1. Simple or Primitive Types: These are the basic units. Following is the list of simple data Types:
 
-	a. 'boolean' :Allowed values are True or False (the strings should be spelled exactly as shown) 
-	b. 'integer' :A signed or unsigned numeric string used as an integer number representation
-	c. 'text' :A Unicode string
-	d. 'real' :A numeric value of arbitrary precision. 
-	e. 'openchoice' :An open choice is a list of one or more of preferred values, but other values can be freely used
-	f. 'closedchoice' :A closed choice only allows values from the defined list
-	g. 'seq' : An ordered array 
-	h. 'bag' : An unordered array
-	i. 'alt' : An alternative array
-	j. 'date' : A string representing a date in yyyy/dd/mm hh:mm:ss.pp +hh:ss format
-	k. 'rating' : A numeric value of real type between 0-5. Will be represented as 'Rating Stars' in the UI
-	l. 'URL' : A string to store a URL. On the UI this will appears as a special widget through which user can open the URL by clicking a button
+	a. "boolean" :Allowed values are True or False (the strings should be spelled exactly as shown) 
+	b. "integer" :A signed or unsigned numeric string used as an integer number representation
+	c. "text" :A Unicode string
+	d. "real" :A numeric value of arbitrary precision. 
+	e. "openchoice" :An open choice is a list of one or more of preferred values, but other values can be freely used
+	f. "closedchoice" :A closed choice only allows values from the defined list
+	g. "seq" : An ordered array 
+	h. "bag" : An unordered array
+	i. "alt" : An alternative array
+	j. "date" : A string representing a date in yyyy/dd/mm hh:mm:ss.pp +hh:ss format
+	k. "rating" : A numeric value of real type between 0-5. Will be represented as "Rating Stars" in the UI
+	l. "URL" : A string to store a URL. On the UI this will appears as a special widget through which user can open the URL by clicking a button
 	
 	All the simple data types are tied to a Default Widget. For mapping please refer the documentation. This default mapping can be overridden, for some type, in the view.xml file.
 
 2. Composed data types: These data types can be created by users as combinations of Primitive data types. For example a new composed data type can be created grouping number of primitive data types (like structures). Composed types can be created in two ways:
-		a. Extending a primitive data type: A new type Temperature can be created by extending 'real' type
+		a. Extending a primitive data type: A new type Temperature can be created by extending "real" type
 		b. Creating structure: Several primitive data types can be grouped into one.
 		
 This sample schema will demonstrate how properties, with all the different data types, are defined.		
 -->
 <xmp_definitions>
   <!-- Defining the namespace and prefix of the schema --> 	
-	<xmp_schema prefix='nemateriaSchema' namespace='http://my.nemateriaSchema.namespace/' label='Data schema for Nemateria' description='Set Dublin Core data for Nemateria'>		
+	<xmp_schema prefix="nemateriaSchema" namespace="http://my.nemateriaSchema.namespace/" label="Data schema for Nemateria" description="Set Dublin Core data for Nemateria">		
 		
 		<!-- Dublin Core -->
-		<xmp_property name='title' category='external' type='text' label="$$$/nemateriaSchema/Property/DBTitle=Title" description="$$$/nemateriaSchema/Property/DBTitleDescription=Document's title (original or attributed)"/>
-		<xmp_property name='creator' category='external' type='bag' label="$$$/nemateriaSchema/Property/DBCreator=Creator" description="$$$/nemateriaSchema/Property/DBCreatorDescription='SURNAME firstname (role)' for each author. If many, add a comma ',' between them. Do not add moral persons."/>
-		<xmp_property name='subject' category='external' type='bag' label="$$$/nemateriaSchema/Property/DBSubject=Keywords" description="$$$/nemateriaSchema/Property/DBSubjectDescription=Keywords for each collection (not a thesaurus) unless different choice of media library (Rameau for example). List with values separated by commas ','"/>
-		<xmp_property name='description' category='external' type='text' label="$$$/nemateriaSchema/Property/DBDescription=Description" description="$$$/nemateriaSchema/Property/DBDescriptionDescription=Free description."/>
-		<xmp_property name='publisher' category='external' type='text' label="$$$/nemateriaSchema/Property/DBPublisher=Publisher description" description="$$$/nemateriaSchema/Property/DBPublisherDescription=SURNAME firstname."/>
-		<xmp_property name='contributor' category='external' type='text' label="$$$/nemateriaSchema/Property/DBContributor=Contributors or curators" description="$$$/nemateriaSchema/Property/DBContributorDescription=Informations on contributors or curators if useful."/>
-		<xmp_property name='date' category='external' type='text' label="$$$/nemateriaSchema/Property/DBDate=Date" description="$$$/nemateriaSchema/Property/DBDateDescription=Creation date of the document (uselly the historical date)."/>
-		<xmp_property name='type' category='external' type='text' label="$$$/nemateriaSchema/Property/DBType=Type" description="$$$/nemateriaSchema/Property/DBTypeDescription=Nature or genre of the resource (categories, functions, general genres, content aggregation levels)."/>
-		<xmp_property name='format' category='external' type='text' label="$$$/nemateriaSchema/Property/DBFormat=Format" description="$$$/nemateriaSchema/Property/DBFormatDescription=Physical or digital manifestation of the resource."/>
-		<xmp_property name='identifier' category='external' type='text' label="$$$/nemateriaSchema/Property/DBIdentifier=Identifier" description="$$$/nemateriaSchema/Property/DBIdentifierDescription=Unique reference to the resource in a given context (URI, ISBN)."/>
-		<xmp_property name='source' category='external' type='text' label="$$$/nemateriaSchema/Property/DBSource=Source" description="$$$/nemateriaSchema/Property/DBSourceDescription=Reference to a resource from which the described resource is derived (URI)."/>
-		<xmp_property name='language' category='external' type='text' label="$$$/nemateriaSchema/Property/DBLanguage=Language" description="$$$/nemateriaSchema/Property/DBLanguageDescription=Language of the intellectual content of the resource."/>
-		<xmp_property name='relation' category='external' type='text' label="$$$/nemateriaSchema/Property/DBRelation=Relation" description="$$$/nemateriaSchema/Property/DBRelationDescription=Reference to a related or linked resource."/>
-		<xmp_property name='coverage' category='external' type='text' label="$$$/nemateriaSchema/Property/DBCoverage=Coverage" description="$$$/nemateriaSchema/Property/DBCoverageDescription=Format of the digital master (ex. 50 million pixel RGB TIFF file)."/>
-		<xmp_property name='rights' category='external' type='text' label="$$$/nemateriaSchema/Property/DBRights=Rights" description="$$$/nemateriaSchema/Property/DBRightsDescription=Information on the rights associated with the resource (IPR, copyright, licence, etc.)"/>
-
+		<xmp_property name="title" category="external" type="text" label="$$$/nemateriaSchema/Property/DBTitle=Title" description="$$$/nemateriaSchema/Property/DBTitleDescription=Document's title (original or attributed)"/>
+		<xmp_property name="creator" category="external" type="text" label="$$$/nemateriaSchema/Property/DBCreator=Creator" description="$$$/nemateriaSchema/Property/DBCreatorDescription='SURNAME firstname (role)' for each author. If many, add a comma ',' between them. Do not add moral persons."/>
+		<xmp_property name="subject" category="external" type="text" label="$$$/nemateriaSchema/Property/DBSubject=Keywords" description="$$$/nemateriaSchema/Property/DBSubjectDescription=Keywords for each collection (not a thesaurus) unless different choice of media library (Rameau for example). List with values separated by commas ','"/>
+		<xmp_property name="description" category="external" type="text" label="$$$/nemateriaSchema/Property/DBDescription=Description" description="$$$/nemateriaSchema/Property/DBDescriptionDescription=Free description."/>
+		<xmp_property name="publisher" category="external" type="text" label="$$$/nemateriaSchema/Property/DBPublisher=Publisher description" description="$$$/nemateriaSchema/Property/DBPublisherDescription=SURNAME firstname."/>
+		<xmp_property name="contributor" category="external" type="text" label="$$$/nemateriaSchema/Property/DBContributor=Contributors or curators" description="$$$/nemateriaSchema/Property/DBContributorDescription=Informations on contributors or curators if useful."/>
+		<xmp_property name="date" category="external" type="date" label="$$$/nemateriaSchema/Property/DBDate=Date" description="$$$/nemateriaSchema/Property/DBDateDescription=Creation date of the document (uselly the historical date)."/>
+		<xmp_property name="type" category="external" type="text" label="$$$/nemateriaSchema/Property/DBType=Type" description="$$$/nemateriaSchema/Property/DBTypeDescription=Nature or genre of the resource (categories, functions, general genres, content aggregation levels)."/>
+		<xmp_property name="format" category="external" type="text" label="$$$/nemateriaSchema/Property/DBFormat=Format" description="$$$/nemateriaSchema/Property/DBFormatDescription=Physical or digital manifestation of the resource."/>
+		<xmp_property name="identifier" category="external" type="text" label="$$$/nemateriaSchema/Property/DBIdentifier=Identifier" description="$$$/nemateriaSchema/Property/DBIdentifierDescription=Unique reference to the resource in a given context (URI, ISBN)."/>
+		<xmp_property name="source" category="external" type="text" label="$$$/nemateriaSchema/Property/DBSource=Source" description="$$$/nemateriaSchema/Property/DBSourceDescription=Reference to a resource from which the described resource is derived (URI)."/>
+		<xmp_property name="language" category="external" type="text" label="$$$/nemateriaSchema/Property/DBLanguage=Language" description="$$$/nemateriaSchema/Property/DBLanguageDescription=Language of the intellectual content of the resource."/>
+		<xmp_property name="relation" category="external" type="text" label="$$$/nemateriaSchema/Property/DBRelation=Relation" description="$$$/nemateriaSchema/Property/DBRelationDescription=Reference to a related or linked resource."/>
+		<xmp_property name="coverage" category="external" type="text" label="$$$/nemateriaSchema/Property/DBCoverage=Coverage" description="$$$/nemateriaSchema/Property/DBCoverageDescription=Format of the digital master (ex. 50 million pixel RGB TIFF file)."/>
+		<xmp_property name="rights" category="external" type="text" label="$$$/nemateriaSchema/Property/DBRights=Rights" description="$$$/nemateriaSchema/Property/DBRightsDescription=Information on the rights associated with the resource (IPR, copyright, licence, etc.)"/>
+		
 		<!-- Informations on the document -->
-		<xmp_property name='id' category='external' type='text' label="$$$/nemateriaSchema/Property/DocID=Unique identifier" description='$$$/nemateriaSchema/Property/DocIDDescription=Unique identifier of the document (refer to the documentation).'/>
-		<xmp_property name='original_reference' category='external' type='text' label="$$$/nemateriaSchema/Property/DocRef=Reference to original" description="$$$/nemateriaSchema/Property/DocRefDescription=Previous reference in intial information system."/>
-		<xmp_property name='original_file' category='external' type='text' label="$$$/nemateriaSchema/Property/DocOriginalRef=Original file" description="$$$/nemateriaSchema/Property/DocOriginalDescription=Name of the original document."/>
-		<xmp_property name='original_creation_date' category='external' type='text' label="$$$/nemateriaSchema/Property/DocCreation=Original's creation date" description="$$$/nemateriaSchema/Property/DocCreationDescription=Creation date of the original (historical)."/>
-		<xmp_property name='original_support_type' category='external' type='text' label="$$$/nemateriaSchema/Property/DocSupport=Type of the original support" description="$$$/nemateriaSchema/Property/DocSupportDescription=Type of the original (ex. Photo on glass / Cinema film 1 h 23 min / book 326 pages)."/>
-		<xmp_property name='curator_file' category='external' type='text' label="$$$/nemateriaSchema/Property/DocCarac=Curator of the document" description="$$$/nemateriaSchema/Property/DocCaracDescription=The name of the curator of the document."/>
-		<xmp_property name='rights_holders' category='external' type='bag' label="$$$/nemateriaSchema/Property/DocMaster=Who holds the rights" description="$$$/nemateriaSchema/Property/DocMasterDescription=Format of the numeric master (ex. 50 million pixel RGB TIFF file)."/>
-		<xmp_property name='numerisation_date' category='external' type='text' label="$$$/nemateriaSchema/Property/DocDateNum=Numerisation date" description="$$$/nemateriaSchema/Property/DocDateNumDescription=Numerisation date of the document."/>
-		<xmp_property name='access_conditions' category='external' type='bag' label="$$$/nemateriaSchema/Property/DocAccessibilite=Access conditions" description="$$$/nemateriaSchema/Property/DocAccessibiliteDescription=Define the conditions to access to the document. You can choose numbers separated by comma or describe the conditions (cf. documentation)"/>
+		<xmp_property name="id" category="external" type="text" label="$$$/nemateriaSchema/Property/DocID=Unique identifier" description="$$$/nemateriaSchema/Property/DocIDDescription=Unique identifier of the document (refer to the documentation)."/>
+		<xmp_property name="original_reference" category="external" type="text" label="$$$/nemateriaSchema/Property/DocRef=Reference to original" description="$$$/nemateriaSchema/Property/DocRefDescription=Previous reference in intial information system."/>
+		<xmp_property name="original_file" category="external" type="text" label="$$$/nemateriaSchema/Property/DocOriginalRef=Original file" description="$$$/nemateriaSchema/Property/DocOriginalDescription=Name of the original document."/>
+		<xmp_property name="original_creation_date" category="external" type="date" label="$$$/nemateriaSchema/Property/DocCreation=Original's creation date" description="$$$/nemateriaSchema/Property/DocCreationDescription=Creation date of the original (historical)."/>
+		<xmp_property name="original_support_type" category="external" type="text" label="$$$/nemateriaSchema/Property/DocSupport=Type of the original support" description="$$$/nemateriaSchema/Property/DocSupportDescription=Type of the original (ex. Photo on glass / Cinema film 1 h 23 min / book 326 pages)."/>
+		<xmp_property name="curator_file" category="external" type="text" label="$$$/nemateriaSchema/Property/DocCarac=Curator of the document" description="$$$/nemateriaSchema/Property/DocCaracDescription=The name of the curator of the document."/>
+		<xmp_property name="rights_holders" category="external" type="text" label="$$$/nemateriaSchema/Property/DocMaster=Master rights owner" description="$$$/nemateriaSchema/Property/DocMasterDescription=Who own master's rights."/>
+		<xmp_property name="numerisation_date" category="external" type="text" label="$$$/nemateriaSchema/Property/DocDateNum=Numerisation date" description="$$$/nemateriaSchema/Property/DocDateNumDescription=Numerisation date of the document."/>
+		<xmp_property name="access_conditions" category="external" type="text" label="$$$/nemateriaSchema/Property/DocAccessibilite=Access conditions" description="$$$/nemateriaSchema/Property/DocAccessibiliteDescription=Define the conditions to access to the document. You can choose numbers separated by comma or describe the conditions (cf. documentation)"/>
 
 		<!-- Managing attendees and rights -->
-		<xmp_property name='attendees' category='external' type='text' label="$$$/nemateriaSchema/Property/Participants=Attendees and roles" description='$$$/nemateriaSchema/Property/ParticipantsDescription=SURNAME firstname (role) (separate attendees by commas).'/>
-		<xmp_property name='publisher_online' category='external' type='text' label="$$$/nemateriaSchema/Property/PartEditeur=Online publisher" description="$$$/nemateriaSchema/Property/PartEditeurDescription=Who hold the online collection."/>
-		<xmp_property name='publisher_source_oeuvre' category='external' type='text' label="$$$/nemateriaSchema/Property/PartEditeurSource=Publisher of the source oeuvre " description="$$$/nemateriaSchema/Property/PartEditeurSourceDescription=Company name, head office (companies could be separated by commas)."/>
-		<xmp_property name='producers' category='external' type='bag' label="$$$/nemateriaSchema/Property/PartProducteur=Partners and producers" description="$$$/nemateriaSchema/Property/PartProducteurDescription=Company name (role) ; or SURNAME firstname (role) (producers could be separated by commas)."/>
-		<xmp_property name='copyright' category='external' type='text' label="$$$/nemateriaSchema/Property/DroitsCopyright=Document's copyright" description="$$$/nemateriaSchema/Property/DroitsCopyrightDescription=Licence type and rights explanation."/>
-		<xmp_property name='url_licence' category='external' type='text' label="$$$/nemateriaSchema/Property/DroitsUrlLicence=Link to licence" description="$$$/nemateriaSchema/Property/DroitsUrlLicenceDescription=A link to an external licence page explanation."/>
+		<xmp_property name="attendees" category="external" type="text" label="$$$/nemateriaSchema/Property/Participants=Attendees and roles" description="$$$/nemateriaSchema/Property/ParticipantsDescription=SURNAME firstname (role) (separate attendees by commas)."/>
+		<xmp_property name="publisher_online" category="external" type="text" label="$$$/nemateriaSchema/Property/PartEditeur=Online publisher" description="$$$/nemateriaSchema/Property/PartEditeurDescription=Who hold the online collection."/>
+		<xmp_property name="publisher_source_oeuvre" category="external" type="text" label="$$$/nemateriaSchema/Property/PartEditeurSource=Publisher of the source oeuvre " description="$$$/nemateriaSchema/Property/PartEditeurSourceDescription=Company name, head office (companies could be separated by commas)."/>
+		<xmp_property name="producers" category="external" type="text" label="$$$/nemateriaSchema/Property/PartProducteur=Partners and producers" description="$$$/nemateriaSchema/Property/PartProducteurDescription=Company name (role) ; or SURNAME firstname (role) (producers could be separated by commas)."/>
+		<xmp_property name="copyright" category="external" type="text" label="$$$/nemateriaSchema/Property/DroitsCopyright=Document's copyright" description="$$$/nemateriaSchema/Property/DroitsCopyrightDescription=Licence type and rights explanation."/>
+		<xmp_property name="url_licence" category="external" type="text" label="$$$/nemateriaSchema/Property/DroitsUrlLicence=Link to licence" description="$$$/nemateriaSchema/Property/DroitsUrlLicenceDescription=A link to an external licence page explanation."/>
 
 		<!-- Managing localisation data -->
-		<xmp_property name='latitude' category='external' type='text' label="$$$/nemateriaSchema/Property/LocLatitude=Latitude" description='$$$/nemateriaSchema/Property/LocLatitueDescription=Latitude of document to show on map'/>
-		<xmp_property name='longitude' category='external' type='text' label="$$$/nemateriaSchema/Property/LocLongitude=Longitude" description="$$$/nemateriaSchema/Property/LocLongitudeDescription=Longitude to show on map"/>
-		<xmp_property name='where_subject' category='external' type='text' label="$$$/nemateriaSchema/Property/LocWhereSubject=Subject location" description="$$$/nemateriaSchema/Property/LocWherSubjectDescription=Location of the subject treated."/>
-		<xmp_property name='where_digit' category='external' type='text' label="$$$/nemateriaSchema/Property/LocWhereDigit=Where digitized" description="$$$/nemateriaSchema/Property/LocWhereDigitDescription=Where was been digitized."/>
-		<xmp_property name='where_preserv' category='external' type='text' label="$$$/nemateriaSchema/Property/LocWherePreserve=Where preserved" description="$$$/nemateriaSchema/Property/LocWherePreserveDescription=Where document is preserved."/>
+		<xmp_property name="latitude" category="external" type="real" label="$$$/nemateriaSchema/Property/LocLatitude=Latitude" description="$$$/nemateriaSchema/Property/LocLatitueDescription=Latitude of document to show on map"/>
+		<xmp_property name="longitude" category="external" type="real" label="$$$/nemateriaSchema/Property/LocLongitude=Longitude" description="$$$/nemateriaSchema/Property/LocLongitudeDescription=Longitude to show on map"/>
+		<xmp_property name="where_subject" category="external" type="text" label="$$$/nemateriaSchema/Property/LocWhereSubject=Subject location" description="$$$/nemateriaSchema/Property/LocWherSubjectDescription=Location of the subject treated."/>
+		<xmp_property name="where_digit" category="external" type="text" label="$$$/nemateriaSchema/Property/LocWhereDigit=Where digitized" description="$$$/nemateriaSchema/Property/LocWhereDigitDescription=Where was been digitized."/>
+		<xmp_property name="where_preserv" category="external" type="text" label="$$$/nemateriaSchema/Property/LocWherePreserve=Where preserved" description="$$$/nemateriaSchema/Property/LocWherePreserveDescription=Where document is preserved."/>
 
 		<!-- Managing informants data -->
-		<xmp_property name='informants' category='external' type='bag' label="$$$/nemateriaSchema/Property/Informateur=Informants(s)" description='$$$/nemateriaSchema/Property/InformateursDescription=SURNAME Firstname (informants could be separated by commas).'/>
-		<xmp_property name='informants_alias' category='external' type='bag' label="$$$/nemateriaSchema/Property/InforAlias=Alias or pseudonym of the informants" description="$$$/nemateriaSchema/Property/InforAliasDescription=List of alias or pseudonyms of informants (could be separated by commas)"/>
-		<xmp_property name='informants_birthday' category='external' type='bag' label="$$$/nemateriaSchema/Property/InforNaissance=Birthdays of informants" description="$$$/nemateriaSchema/Property/InforNaissanceDescription=Liste des dates de naissance des informateurs."/>
-		<xmp_property name='informants_skills' category='external' type='bag' label="$$$/nemateriaSchema/Property/InforCompetence=Skills of informants" description="$$$/nemateriaSchema/Property/InforCompetenceDescription=List of skills (separate skills with space and informants skills by commas)."/>
+		<xmp_property name="informants" category="external" type="text" label="$$$/nemateriaSchema/Property/Informateur=Informants(s)" description="$$$/nemateriaSchema/Property/InformateursDescription=SURNAME Firstname (informants could be separated by commas)."/>
+		<xmp_property name="informants_alias" category="external" type="text" label="$$$/nemateriaSchema/Property/InforAlias=Alias or pseudonym of the informants" description="$$$/nemateriaSchema/Property/InforAliasDescription=List of alias or pseudonyms of informants (could be separated by commas)"/>
+		<xmp_property name="informants_birthday" category="external" type="text" label="$$$/nemateriaSchema/Property/InforNaissance=Birthdays of informants" description="$$$/nemateriaSchema/Property/InforNaissanceDescription=Liste des dates de naissance des informateurs."/>
+		<xmp_property name="informants_skills" category="external" type="text" label="$$$/nemateriaSchema/Property/InforCompetence=Skills of informants" description="$$$/nemateriaSchema/Property/InforCompetenceDescription=List of skills (separate skills with space and informants skills by commas)."/>
 
 		<!-- Managing collection whitch document is part of -->
-		<xmp_property name='collection_name' category='external' type='text' label="$$$/nemateriaSchema/Property/ColNom=Collection's name" description='$$$/nemateriaSchema/Property/ColDescription=The name of the numerical collection the document is part of (Warning ! Must be exactly the same for all documents of this collection).'/>
-		<xmp_property name='set_name' category='external' type='text' label="$$$/nemateriaSchema/Property/SetNom=Set's name" description='$$$/nemateriaSchema/Property/SetDescription=The name of the numerical set the document is part of (Warning ! Must be exactly the same for all documents of this set).'/>
-		<xmp_property name='collection_infos' category='external' type='text' label="$$$/nemateriaSchema/Property/ColInfos=Informations on collection" description='$$$/nemateriaSchema/Property/ColInfosDescription=Information on context of the collection.'/>
-		<xmp_property name='collection_funds' category='external' type='text' label="$$$/nemateriaSchema/Property/ColFunds=Funds" description='$$$/nemateriaSchema/Property/ColFundsDescription=The funds that hold the collection'/>
-		<xmp_property name='who_scans' category='external' type='text' label="$$$/nemateriaSchema/Property/ColNumerisation=Who digitized" description="$$$/nemateriaSchema/Property/ColNumDescription=Precise who scans the documents."/>
-		<xmp_property name='original_owner' category='external' type='text' label="$$$/nemateriaSchema/Property/ColProprietaire=Original's document owner" description="$$$/nemateriaSchema/Property/ColProprietaireDescription=Precise the name of the original's document owner."/>
-		<xmp_property name='originals_curator' category='external' type='text' label="$$$/nemateriaSchema/Property/ColOriginaux=Conservateur originaux" description="$$$/nemateriaSchema/Property/ColOriginauxDescription=Indicate who keeps the files."/>
-		<xmp_property name='rights_holder' category='external' type='text' label="$$$/nemateriaSchema/Property/ColDetenteur=Rights owner" description="$$$/nemateriaSchema/Property/ColDetenteurDescription=Specify who owns the rights to the collection and/or file."/>
-		<xmp_property name='collection_manager' category='external' type='text' label="$$$/nemateriaSchema/Property/ColGest=Collection's manager" description="$$$/nemateriaSchema/Property/ColGestDescription=Name of collection's manager."/>
-		<xmp_property name='collection_location' category='external' type='text' label="$$$/nemateriaSchema/Property/ColLoc=Collection location" description="$$$/nemateriaSchema/Property/ColLocDescription=What places does the collection originate from or show of."/>
+		<xmp_property name="collection_name" category="external" type="text" label="$$$/nemateriaSchema/Property/ColNom=Collection's name" description="$$$/nemateriaSchema/Property/ColDescription=The name of the numerical collection the document is part of (Warning ! Must be exactly the same for all documents of this collection)."/>
+		<xmp_property name="set_name" category="external" type="text" label="$$$/nemateriaSchema/Property/SetNom=Set's name" description="$$$/nemateriaSchema/Property/SetDescription=The name of the numerical set the document is part of (Warning ! Must be exactly the same for all documents of this set)."/>
+		<xmp_property name="collection_infos" category="external" type="text" label="$$$/nemateriaSchema/Property/ColInfos=Informations on collection" description="$$$/nemateriaSchema/Property/ColInfosDescription=Information on context of the collection."/>
+		<xmp_property name="collection_funds" category="external" type="text" label="$$$/nemateriaSchema/Property/ColFunds=Funds" description="$$$/nemateriaSchema/Property/ColFundsDescription=The funds that hold the collection"/>
+		<xmp_property name="who_scans" category="external" type="text" label="$$$/nemateriaSchema/Property/ColNumerisation=Who digitized" description="$$$/nemateriaSchema/Property/ColNumDescription=Precise who scans the documents."/>
+		<xmp_property name="original_owner" category="external" type="text" label="$$$/nemateriaSchema/Property/ColProprietaire=Original's document owner" description="$$$/nemateriaSchema/Property/ColProprietaireDescription=Precise the name of the original's document owner."/>
+		<xmp_property name="originals_curator" category="external" type="text" label="$$$/nemateriaSchema/Property/ColOriginaux=Conservateur originaux" description="$$$/nemateriaSchema/Property/ColOriginauxDescription=Indicate who keeps the files."/>
+		<xmp_property name="rights_holder" category="external" type="text" label="$$$/nemateriaSchema/Property/ColDetenteur=Rights owner" description="$$$/nemateriaSchema/Property/ColDetenteurDescription=Specify who owns the rights to the collection and/or file."/>
+		<xmp_property name="collection_manager" category="external" type="text" label="$$$/nemateriaSchema/Property/ColGest=Collection's manager" description="$$$/nemateriaSchema/Property/ColGestDescription=Name of collection's manager."/>
+		<xmp_property name="collection_location" category="external" type="text" label="$$$/nemateriaSchema/Property/ColLoc=Collection location" description="$$$/nemateriaSchema/Property/ColLocDescription=What places does the collection originate from or show of."/>
 
-		<!-- Series inside collection's document -->
-		<xmp_property name='series' category='external' type='text' label="$$$/nemateriaSchema/Property/Serie=Is par of the series"  description='$$$/nemateriaSchema/Property/SerieDescription=A simple name (one or two words).'/>
-		<xmp_property name='series_parent' category='external' type='text' label="$$$/nemateriaSchema/Property/SerieParent=Parent series"  description="$$$/nemateriaSchema/Property/SerieParentDescription=The series has a parent ? (create a hierarchy)"/>
-		<xmp_property name='series_order' category='external' type='integrer' label="$$$/nemateriaSchema/Property/SerieOrdre=Order in the series"  description="$$$/nemateriaSchema/Property/OrdreDescription=Give a number to order the media in the series."/>
+		<!-- Series inside collection"s document -->
+		<xmp_property name="series" category="external" type="text" label="$$$/nemateriaSchema/Property/Serie=Is par of the series"  description="$$$/nemateriaSchema/Property/SerieDescription=A simple name (one or two words)."/>
+		<xmp_property name="series_parent" category="external" type="text" label="$$$/nemateriaSchema/Property/SerieParent=Parent series"  description="$$$/nemateriaSchema/Property/SerieParentDescription=The series has a parent ? (create a hierarchy)"/>
+		<xmp_property name="series_order" category="external" type="text" label="$$$/nemateriaSchema/Property/SerieOrdre=Order in the series"  description="$$$/nemateriaSchema/Property/OrdreDescription=Give a number to order the media in the series."/>
 
 		<!-- Managing sequences inside audio and video files (for quick access) -->
-		<xmp_property name='sequences' category='external' type='bag' label="$$$/nemateriaSchema/Property/Sequence=Number of the sequence" description='$$$/nemateriaSchema/Property/SeqDescription=List of sequences or marks in media.'/>
-		<xmp_property name='time_codes' category='external' type='bag' label="$$$/nemateriaSchema/Property/TimeCode=List of 'time codes'" description="$$$/nemateriaSchema/Property/SeqTimeCodeDescription=List of start time codes of sequences (the beginning of the time code for each sequence)."/>
-		<xmp_property name='sequences_durations' category='external' type='bag' label="$$$/nemateriaSchema/Property/seqDuree=Durations" description="$$$/nemateriaSchema/Property/SeqDureeDescription=List of durations of sequences."/>
-		<xmp_property name='sequences_resumes' category='external' type='bag' label="$$$/nemateriaSchema/Property/SeqResume=Short descriptions" description="$$$/nemateriaSchema/Property/SeqResumeDescription=List of short descriptions of the sequence."/>
-		<xmp_property name='sequences_keywords' category='external' type='bag' label="$$$/nemateriaSchema/Property/seqMotCles=Keywords" description="$$$/nemateriaSchema/Property/SeqMotsClesDescription=List of keywords of the sequence."/>
-		<xmp_property name='events_marks' category='external' type='bag' label="$$$/nemateriaSchema/Property/seqMarqueEvenement=Events or marks triggers" description="$$$/nemateriaSchema/Property/SeqMarqueEvenementDescription=List of events code to trigger (names). Take a look to the documentation for more informations."/>
+		<xmp_property name="sequences" category="external" type="text" label="$$$/nemateriaSchema/Property/Sequence=Number of the sequence" description="$$$/nemateriaSchema/Property/SeqDescription=List of sequences or marks in media."/>
+		<xmp_property name="time_codes" category="external" type="text" label="$$$/nemateriaSchema/Property/TimeCode=List of 'time codes'" description="$$$/nemateriaSchema/Property/SeqTimeCodeDescription=List of start time codes of sequences (the beginning of the time code for each sequence)."/>
+		<xmp_property name="sequences_durations" category="external" type="text" label="$$$/nemateriaSchema/Property/seqDuree=Durations" description="$$$/nemateriaSchema/Property/SeqDureeDescription=List of durations of sequences."/>
+		<xmp_property name="sequences_resumes" category="external" type="text" label="$$$/nemateriaSchema/Property/SeqResume=Short descriptions" description="$$$/nemateriaSchema/Property/SeqResumeDescription=List of short descriptions of the sequence."/>
+		<xmp_property name="sequences_keywords" category="external" type="text" label="$$$/nemateriaSchema/Property/seqMotCles=Keywords" description="$$$/nemateriaSchema/Property/SeqMotsClesDescription=List of keywords of the sequence."/>
+		<xmp_property name="events_marks" category="external" type="text" label="$$$/nemateriaSchema/Property/seqMarqueEvenement=Events or marks triggers" description="$$$/nemateriaSchema/Property/SeqMarqueEvenementDescription=List of events code to trigger (names). Take a look to the documentation for more informations."/>
 		
 		<!-- Relations between documents -->
-		<xmp_property name='contains_elements' category='external' type='text' label="$$$/nemateriaSchema/Property/relElements=Contain this elements" description='$$$/nemateriaSchema/Property/relElementsDescription=Elements contained in this document (separated by commas).'/>
-		<xmp_property name='require_documents' category='external' type='text' label="$$$/nemateriaSchema/Property/relRequiert=Requiert ces documents" description="$$$/nemateriaSchema/Property/relRequiertDescription=Required elements for this document (separated by commas)."/>
-		<xmp_property name='links_internal_documents' category='external' type='text' label="$$$/nemateriaSchema/Property/relInternes=Links inside collections" description="$$$/nemateriaSchema/Property/relInternesDescription=List of internal links inside the collections (separated by commas)."/>
-		<xmp_property name='links_external_documents' category='external' type='text' label="$$$/nemateriaSchema/Property/relExternes=Links to external documents" description="$$$/nemateriaSchema/Property/relExternesDescription=List of link to external document (separated by commas)."/>
+		<xmp_property name="contains_elements" category="external" type="text" label="$$$/nemateriaSchema/Property/relElements=Contain this elements" description="$$$/nemateriaSchema/Property/relElementsDescription=Elements contained in this document (separated by commas)."/>
+		<xmp_property name="require_documents" category="external" type="text" label="$$$/nemateriaSchema/Property/relRequiert=Requiert ces documents" description="$$$/nemateriaSchema/Property/relRequiertDescription=Required elements for this document (separated by commas)."/>
+		<xmp_property name="links_internal_documents" category="external" type="text" label="$$$/nemateriaSchema/Property/relInternes=Links inside collections" description="$$$/nemateriaSchema/Property/relInternesDescription=List of internal links inside the collections (separated by commas)."/>
+		<xmp_property name="links_external_documents" category="external" type="text" label="$$$/nemateriaSchema/Property/relExternes=Links to external documents" description="$$$/nemateriaSchema/Property/relExternesDescription=List of link to external document (separated by commas)."/>
 
 		<!-- Certification that protect documents -->
-		<xmp_property name='certif_type' category='external' type='text' label="$$$/nemateriaSchema/Property/certifType=Type of certification" description="$$$/nemateriaSchema/Property/certifTypeDescription=Indiquer le type de certification dont il s'agit."/>
-		<xmp_property name='certif_autority' category='external' type='text' label="$$$/nemateriaSchema/Property/certifAutorite=Certification authority" description="$$$/nemateriaSchema/Property/certifAutoriteDescription=Présenter et expliquer l'autorité qui certifie (blockchain ou organisme)."/>
-		<xmp_property name='certif_hash' category='external' type='text' label="$$$/nemateriaSchema/Property/certifHash=Hash (blockchain)" description="$$$/nemateriaSchema/Property/CertifHashDescription=Hash permettant de vérifier la certification par la blockchain ou un système de certification."/>
-		<xmp_property name='certif_politic' category='external' type='text' label="$$$/nemateriaSchema/Property/certifPolitique=External link" description="$$$/nemateriaSchema/Property/certifPolitiqueDescription=Link and informations on certification to explain his politic and how it work."/>
+		<xmp_property name="certif_type" category="external" type="text" label="$$$/nemateriaSchema/Property/certifType=Type of certification" description="$$$/nemateriaSchema/Property/certifTypeDescription=Type of certification."/>
+		<xmp_property name="certif_autority" category="external" type="text" label="$$$/nemateriaSchema/Property/certifAutorite=Certification authority" description="$$$/nemateriaSchema/Property/certifAutoriteDescription=Who garantees the certification"/>
+		<xmp_property name="certif_hash" category="external" type="text" label="$$$/nemateriaSchema/Property/certifHash=Hash (blockchain)" description="$$$/nemateriaSchema/Property/CertifHashDescription=Hash permettant de vérifier la certification par la blockchain ou un système de certification."/>
+		<xmp_property name="certif_politic" category="external" type="text" label="$$$/nemateriaSchema/Property/certifPolitique=External link" description="$$$/nemateriaSchema/Property/certifPolitiqueDescription=Link and informations on certification to explain his politic and how it work."/>
 	
 	</xmp_schema>
 </xmp_definitions>

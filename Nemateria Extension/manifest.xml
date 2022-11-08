@@ -12,7 +12,7 @@ this file from a source other than Adobe, then your use, modification, or distri
 of it requires the prior written permission of Adobe.
 -->
 <extension xmlns="http://ns.adobe.com/metadata/extension/1.0/"
-   name="com.adobe.sample.extension"
+   name="com.exlineo.nemateria.schema"
    version="1.0"
    locFilePrefix="nemateriaSchema">
 </extension>
