@@ -1,0 +1,108 @@
+[
+    {
+        "id": "dividerNemateriaOriginal",
+        "displayName": "[Nemateria] Collection à laquelle appartient le média",
+        "type": "Divider",
+        "dependencies": []
+    },
+    {
+        "id": "nema:collection_name",
+        "displayName": "Nom la collection",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "collection_name",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:set_name",
+        "displayName": "Nom du set de données",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "set_name",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:collection_infos",
+        "displayName": "Informations sur la collection",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "collection_infos",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:collection_funds",
+        "displayName": "Fonds auquel appartient la collection",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "collection_funds",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:who_scans",
+        "displayName": "Personne(s) qui a scanné la collection",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "who_scans",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:original_owner",
+        "displayName": "Propriétaire des originaux",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "original_owner",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:originals_curator",
+        "displayName": "Conservateur des originaux",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "originals_curator",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:rights_holder",
+        "displayName": "Détenteur des droits",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "rights_holder",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:collection_manager",
+        "displayName": "Gestionnaire de la collection",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "collection_manager",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:collection_location",
+        "displayName": "Localisation de la collection",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "collection_location",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    }
+]

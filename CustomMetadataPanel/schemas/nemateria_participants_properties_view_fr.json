@@ -1,0 +1,98 @@
+[
+    {
+        "id": "dividerNemateriaOriginal",
+        "displayName": "[Nemateria] Participants et éditeurs",
+        "type": "Divider",
+        "dependencies": []
+    },
+    {
+        "id": "nema:attendees",
+        "displayName": "Participants",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "attendees",
+        "type": "MultiText",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:publisher_online",
+        "displayName": "Editeur(s) (en ligne)",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "publisher_online",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:publisher_source_oeuvre",
+        "displayName": "Editeur de l'oeuvre originale",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "publisher_source_oeuvre",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:producers",
+        "displayName": "Producteurs et partenaires",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "producers",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:copyright",
+        "displayName": "Licence et copyright",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "copyright",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:url_licence",
+        "displayName": "URL de la licence",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "url_licence",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:informants",
+        "displayName": "Informateurs",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "informants",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:informants_birthday",
+        "displayName": "Date de naissance des informateurs",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "informants_birthday",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:informants_skills",
+        "displayName": "Compétences des informateurs",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "informants_skills",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    }
+]

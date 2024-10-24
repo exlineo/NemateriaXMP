@@ -1,0 +1,48 @@
+[
+    {
+        "id": "dividerNemateriaOriginal",
+        "displayName": "[Nemateria] Liens",
+        "type": "Divider",
+        "dependencies": []
+    },
+    {
+        "id": "nema:contains_elements",
+        "displayName": "Liens contenus dans le document",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "contains_elements",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:require_documents",
+        "displayName": "Documents requis en lien",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "require_documents",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:links_internal_documents",
+        "displayName": "Documents internes corrélés",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "links_internal_documents",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:links_external_documents",
+        "displayName": "Documents externes corrélés",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "links_external_documents",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    }
+]

@@ -1,0 +1,88 @@
+[
+    {
+        "id": "dividerNemateriaOriginal",
+        "displayName": "[Nemateria] Séries et séquences",
+        "type": "Divider",
+        "dependencies": []
+    },
+    {
+        "id": "nema:series",
+        "displayName": "Liste des séries",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "series",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:series_parent",
+        "displayName": "Les séries appartiennent à une série parent",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "series_parent",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:sequences",
+        "displayName": "Séquences dans le média",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "sequences",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:time_codes",
+        "displayName": "Times codes",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "time_codes",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:sequences_durations",
+        "displayName": "Durées des séquences",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "sequences_durations",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:sequences_resumes",
+        "displayName": "Infos sur les séquences",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "sequences_resumes",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:sequences_keywords",
+        "displayName": "Mots clés des séquences",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "sequences_keywords",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:events_marks",
+        "displayName": "Evénements à déclencher lors de la lecture",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "events_marks",
+        "type": "Date",
+        "readOnly": false,
+        "dependencies": []
+    }
+]

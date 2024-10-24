@@ -1,0 +1,160 @@
+[
+  {
+      "id": "dividerDublinCore",
+      "displayName": "Dublin Core Namespace",
+      "type": "Divider",
+      "dependencies": []
+  },
+  {
+      "id": "dc:title",
+      "displayName": "Titre",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "prefix": "dc",
+      "propertyName": "title",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:creator",
+      "displayName": "Créateur(s)",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "creator",
+      "type": "MultiText",
+      "readOnly": false,
+      "dependencies": [],
+      "arrayType": "seq"
+  },
+  {
+      "id": "dc:subject",
+      "displayName": "Sujet ou mots clés",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "subject",
+      "type": "MultiText",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:description",
+      "displayName": "Description",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "prefix": "dc",
+      "propertyName": "description",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:publisher",
+      "displayName": "Editeur(s)",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "publisher",
+      "type": "MultiText",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:contributor",
+      "displayName": "Contributeur(s)",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "contributor",
+      "type": "MultiText",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:coverage",
+      "displayName": "Coverage",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "prefix": "dc",
+      "propertyName": "coverage",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:date",
+      "displayName": "Date",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "date",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": [],
+      "arrayType": "seq"
+  },
+  {
+      "id": "dc:type",
+      "displayName": "Type",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "type",
+      "type": "MultiText",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:format",
+      "displayName": "Format",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "prefix": "dc",
+      "propertyName": "format",
+      "type": "Text",
+      "readOnly": true,
+      "dependencies": []
+  },
+  {
+      "id": "dc:rights",
+      "displayName": "Notice de copyright",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "rights",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:source",
+      "displayName": "Source",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "source",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:language",
+      "displayName": "Language",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "language",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:relation",
+      "displayName": "Relation",
+      "prefix": "dc",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "propertyName": "relation",
+      "type": "MultiText",
+      "readOnly": false,
+      "dependencies": []
+  },
+  {
+      "id": "dc:identifier",
+      "displayName": "Identifiant",
+      "namespace": "http://purl.org/dc/elements/1.1/",
+      "prefix": "dc",
+      "propertyName": "identifier",
+      "type": "Text",
+      "readOnly": false,
+      "dependencies": []
+  }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "id": "dividerNemateriaOriginal",
+        "displayName": "[Nemateria] Informations sur l'original",
+        "type": "Divider",
+        "dependencies": []
+    },
+    {
+        "id": "nema:id",
+        "displayName": "Id unique",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "id",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:original_reference",
+        "displayName": "Référence vers l'original",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "original_reference",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:original_file",
+        "displayName": "Fichier original",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "original_file",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:original_creation_date",
+        "displayName": "Date de création de l'original",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "original_creation_date",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:original_support_type",
+        "displayName": "Type du format original",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "original_support_type",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:curator_file",
+        "displayName": "Conservateur(s) du fichier",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "curator_file",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:rights_holders",
+        "displayName": "Détenteurs des droits",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "rights_holders",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:numerisation_date",
+        "displayName": "Date de numérisation",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "numerisation_date",
+        "type": "Date",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:access_conditions",
+        "displayName": "Conditions d'accès aux originaaux",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "access_conditions",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "id": "dividerNemateriaOriginal",
+        "displayName": "[Nemateria] Localisation des documents",
+        "type": "Divider",
+        "dependencies": []
+    },
+    {
+        "id": "nema:latitude",
+        "displayName": "Latitude",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "latitude",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:longitude",
+        "displayName": "Longitude",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "longitude",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:where_subject",
+        "displayName": "Lieu traité par le média",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "where_subject",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:where_digit",
+        "displayName": "Lieu de la digitalisation",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "where_digit",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:where_preserv",
+        "displayName": "Lieu de conservation",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "where_preserv",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    }
+]

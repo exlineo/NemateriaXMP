@@ -1,0 +1,48 @@
+[
+    {
+        "id": "dividerNemateriaOriginal",
+        "displayName": "[Nemateria] Certifications",
+        "type": "Divider",
+        "dependencies": []
+    },
+    {
+        "id": "nema:certif_type",
+        "displayName": "Type de certification",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "certif_type",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:certif_autority",
+        "displayName": "Autorité de certification",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "certif_autority",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:certif_hash",
+        "displayName": "Hash",
+        "prefix": "nema",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "propertyName": "certif_hash",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    },
+    {
+        "id": "nema:certif_politic",
+        "displayName": "Liens vers la politique du certificat",
+        "namespace": "http://www.nemateria.eu/namespace/",
+        "prefix": "nema",
+        "propertyName": "certif_politic",
+        "type": "Text",
+        "readOnly": false,
+        "dependencies": []
+    }
+]
