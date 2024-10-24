@@ -8,3 +8,9 @@ Le dossier AppData est masqué par défaut, allez dans les paramètres de l'expl
   
 ## Utiliser ces données dans Adobe Bridge
 Dans le logiciel, affichez les préférences (ctrl+k ou Menu Edition/Préférences). Choisissez Métadonnées dans le menu de gauche et activez les groupes (namespaces) de métadonnées dont vous avez besoin.
+
+## Utiliser le Custom Metadata Panel
+Dans les préférence choisir "Open Tab Management"
+Choisir "Add Tab" et sélectionner le fichier nemateria_properties_view_fr.json
+Save > Fermer la fenêtre > Done
+Les métadonnées sont maintenant disponibles.
